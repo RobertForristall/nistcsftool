@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <!--
+    SPDX-FileCopyrightText: Robert Forristall <robert.s.forristall@gmail.com>
+    SPDX-License-Identifier: CC0-1.0
+    -->
+    <id>nistcsftool</id>
+    <name>Nist Csf Tool</name>
+    <summary>NIST-CSF Compliance Assistant</summary>
+    <description><![CDATA[A tool to aid in the assessment of apps developed in nextcloud to check for compliance with the NSIT CSF framework for cybersecurity.]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="robert.s.forristall@gmail.com" homepage="http://nextcloud.local">Robert Forristall</author>
+    <namespace>NistCsfTool</namespace>
+    <category>tools</category>
+    <bugs>http://test.com</bugs>
+    <dependencies>
+        <nextcloud min-version="27" max-version="27"/>
+    </dependencies>
+    <navigations>
+        <navigation>
+            <name>Nist Csf Tool</name>
+            <route>nistcsftool.page.index</route>
+        </navigation>
+    </navigations>
+</info>
