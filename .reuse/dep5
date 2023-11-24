@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Nist Csf Tool
+Upstream-Name: nistcsftool
 Upstream-Contact: Robert Forristall <robert.s.forristall@gmail.com>
 Source: https://github.com/nextcloud/profiler
 

@@ -1,16 +1,24 @@
 <?php
+
 declare(strict_types=1);
-// SPDX-FileCopyrightText: Robert Forristall <robert.s.forristall@gmail.com>
-// SPDX-License-Identifier: AGPL-3.0-or-later
 
 namespace OCA\NistCsfTool\Migration;
 
 use Closure;
 use OCP\DB\ISchemaWrapper;
-use OCP\Migration\SimpleMigrationStep;
+use OCP\DB\Types;
 use OCP\Migration\IOutput;
+use OCP\Migration\SimpleMigrationStep;
 
 class Version000000Date20181013124731 extends SimpleMigrationStep {
+
+	/**
+	 * @param IOutput $output
+	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
+	 * @param array $options
+	 */
+	public function preSchemaChange(IOutput $output, Closure $schemaClosure, array $options) {
+	}
 
 	/**
 	 * @param IOutput $output
@@ -22,28 +30,37 @@ class Version000000Date20181013124731 extends SimpleMigrationStep {
 		/** @var ISchemaWrapper $schema */
 		$schema = $schemaClosure();
 
-		if (!$schema->hasTable('nistcsftool')) {
-			$table = $schema->createTable('nistcsftool');
-			$table->addColumn('id', 'integer', [
+		if (!$schema->hasTable('Apps')) {
+			$table = $schema->createTable('Apps');
+			$table->addColumn('id', Types::BIGINT, [
 				'autoincrement' => true,
 				'notnull' => true,
+				'length' => 4,
 			]);
-			$table->addColumn('title', 'string', [
+			$table->addColumn('user_id', Types::STRING, [
 				'notnull' => true,
-				'length' => 200
+				'length' => 64,
 			]);
-			$table->addColumn('user_id', 'string', [
+			$table->addColumn('name', Types::STRING, [
 				'notnull' => true,
-				'length' => 200,
+				'length' => 300,
 			]);
-			$table->addColumn('content', 'text', [
+			$table->addColumn('type', Types::STRING, [
 				'notnull' => true,
-				'default' => ''
+				'length' => 300,
 			]);
-
 			$table->setPrimaryKey(['id']);
-			$table->addIndex(['user_id'], 'nistcsftool_user_id_index');
+			$table->addIndex(['user_id'], 'apps_uid');
 		}
+
 		return $schema;
+	}
+
+	/**
+	 * @param IOutput $output
+	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
+	 * @param array $options
+	 */
+	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options) {
 	}
 }

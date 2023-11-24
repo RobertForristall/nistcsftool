@@ -12,6 +12,7 @@ use OCP\IRequest;
 use OCP\Util;
 
 class PageController extends Controller {
+
 	public function __construct(IRequest $request) {
 		parent::__construct(Application::APP_ID, $request);
 	}

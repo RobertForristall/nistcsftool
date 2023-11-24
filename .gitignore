@@ -1,9 +1,23 @@
-# SPDX-FileCopyrightText: Robert Forristall <robert.s.forristall@gmail.com>
-# SPDX-License-Identifier: AGPL-3.0-or-later
+.DS_Store
+node_modules
+/dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
 .idea
-*.iml
-/vendor/
-/build/
-node_modules/
-/.php_cs.cache
-js/*hot-update.*
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
