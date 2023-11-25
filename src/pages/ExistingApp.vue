@@ -4,6 +4,8 @@
         <div class="header-container">
           <h1>Existing App</h1>
         </div>
+        <ListApps v-if="store.currentAppId === -1"/>
+        <AppHome v-if="store.currentAppId !== -1"/>
         <div>
           <button 
             type="button" 
@@ -16,18 +18,17 @@
   </template>
   
   <script>
-  
+  import ListApps from '../components/ListApps.vue'
+  import AppHome from '../components/AppHome.vue'
+
   export default {
     name: 'ExistingApp',
     components: {
-  
-    },    
-    async mounted() {
-      try {
-        console.log(store.currentAppId)
-      } catch (e) {
-        console.error(e)
-      }
+      ListApps,
+      AppHome
+    },
+    data: {
+      apps: []
     },
   }
   </script>

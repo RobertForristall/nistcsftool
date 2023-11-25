@@ -51,9 +51,15 @@
     methods: {
       async submit(e) {
         try {
-          const response = await axios.post(generateUrl('/apps/nistcsftool/apps'), {name: this.name, type: this.type})
-          console.log(response.data);
-          store.currentAppId = response.data.id
+          const postAppResponse = await axios.post(generateUrl('/apps/nistcsftool/apps'), {name: this.name, type: this.type})
+          console.log(postAppResponse.data);
+          store.currentAppId = postAppResponse.data.id
+          if (store.userApps.length == 0) {
+            const getAppsResponse = await axios.get(generateUrl('/apps/nistcsftool/apps'))
+            store.userApps = getAppsResponse.data
+          } else {
+            store.userApps.push(postAppResponse.data)
+          }
           store.pageFlag = 2
         } catch (e) {
           console.error(e)
