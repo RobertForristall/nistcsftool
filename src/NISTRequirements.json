@@ -1,0 +1,650 @@
+{
+    "DE.AE-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.AE-1",
+        "Description": "Network operations baseline: DE.AE-1: A baseline of network operations and expected data flows for users and systems is established and managed.",
+        "Related Controls": "CC1.5\n"
+    },
+    "DE.AE-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.AE-2",
+        "Description": "Analyze events: DE.AE-2: Detected events are analyzed to understand attack targets and methods.",
+        "Related Controls": "CC18.2\n"
+    },
+    "DE.AE-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.AE-3",
+        "Description": "Data aggregation and correlation: DE.AE-3: Event data are aggregated and correlated from multiple sources and sensors",
+        "Related Controls": "CC18.6\n"
+    },
+    "DE.AE-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.AE-4",
+        "Description": "Event impact: DE.AE-4: Impact of events is determined.",
+        "Related Controls": "CC18.7\n"
+    },
+    "DE.AE-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.AE-5",
+        "Description": "Incident alerts: DE.AE-5: Incident alert thresholds are established.",
+        "Related Controls": "CC18.8\n"
+    },
+    "DE.CM-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-1",
+        "Description": "Network monitoring: DE.CM-1: The network is monitored to detect potential cybersecurity events",
+        "Related Controls": "CC18.15\n"
+    },
+    "DE.CM-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-2",
+        "Description": "Physical environment monitoring: DE.CM-2: The physical environment is monitored to detect potential cybersecurity events",
+        "Related Controls": "CC18.10\n"
+    },
+    "DE.CM-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-3",
+        "Description": "Personnel monitoring: DE.CM-3: Personnel activity is monitored to detect potential cybersecurity events",
+        "Related Controls": "CC18.11\n"
+    },
+    "DE.CM-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-4",
+        "Description": "Malicious code detection: DE.CM-4: Malicious code is detected",
+        "Related Controls": "CC18.12\n"
+    },
+    "DE.CM-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-5",
+        "Description": "Mobile code: DE.CM-5: Unauthorized mobile code is detected",
+        "Related Controls": "CC18.13\n"
+    },
+    "DE.CM-6": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-6",
+        "Description": "External service provider monitoring: DE.CM-6: External service provider activity is monitored to detect potential cybersecurity events.",
+        "Related Controls": "CC18.14\n"
+    },
+    "DE.CM-7": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-7",
+        "Description": "Unauthorized activity monitoring: DE.CM-7: Monitoring for unauthorized personnel, connections, devices, and software is performed",
+        "Related Controls": "CC18.15\n"
+    },
+    "DE.CM-8": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.CM-8",
+        "Description": "Vulnerability scans: DE.CM-8: Vulnerability scans are performed",
+        "Related Controls": "CC17.1\n"
+    },
+    "DE.DP-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.DP-1",
+        "Description": "Detection roles and responsibilities: DE.DP-1: Roles and responsibilities for detection are well defined to ensure accountability.",
+        "Related Controls": "CC2.11\n"
+    },
+    "DE.DP-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.DP-2",
+        "Description": "Detection compliance: DE.DP-2: Detection activities comply with all applicable requirements.",
+        "Related Controls": "CC18.16\n"
+    },
+    "DE.DP-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.DP-3",
+        "Description": "Test detection processes: DE.DP-3: Detection processes are tested",
+        "Related Controls": "CC18.17\n"
+    },
+    "DE.DP-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.DP-4",
+        "Description": "Communicate detections: DE.DP-4: Event detection information is communicated to appropriate parties.",
+        "Related Controls": "CC18.18\n"
+    },
+    "DE.DP-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "DE.DP-5",
+        "Description": "Detection continuous improvement: DE.DP-5: Detection processes are continuously improved.",
+        "Related Controls": "CC18.19\n"
+    },
+    "ID.AM-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.AM-1",
+        "Description": "Hardware inventory: ID.AM-1: Physical devices and systems within the organization are inventoried.",
+        "Related Controls": "CC1.1\nCC1.1 for SA.A.1\n"
+    },
+    "ID.AM-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.AM-2",
+        "Description": "Software and Platform Inventory: ID.AM-2: Software platforms and applications within the organization are inventoried",
+        "Related Controls": "CC1.1\nCC1.1 for SA.A.1\n"
+    },
+    "ID.AM-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.AM-3",
+        "Description": "Data Flows: ID.AM-3: Organizational communication and data flows are mapped",
+        "Related Controls": "CC1.1\nCC1.2\nCC1.3\nCC1.1 for SA.A.1\n"
+    },
+    "ID.AM-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.AM-4",
+        "Description": "External Information Systems: ID.AM-4: External information systems are catalogued",
+        "Related Controls": "CC1.1\nCC1.1 for SA.A.1\n"
+    },
+    "ID.AM-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.AM-5",
+        "Description": "Resource and Data Prioritization: ID.AM-5: Resources (e.g., hardware, devices, data, and software) are prioritized based on their classification, criticality, and business value",
+        "Related Controls": "CC14.2\n"
+    },
+    "ID.AM-6": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.AM-6",
+        "Description": "Cybersecurity Roles and Responsibilities: ID.AM-6: Cybersecurity roles and responsibilities for the entire workforce and third-party stakeholders (e.g., suppliers, customers, partners) are established.",
+        "Related Controls": "CC2.4\n"
+    },
+    "ID.BE-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.BE-1",
+        "Description": "Supply Chain Role: ID.BE-1: The organization's role in the supply chain is identified and communicated",
+        "Related Controls": "CC2.1\n"
+    },
+    "ID.BE-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.BE-2",
+        "Description": "Critical Infrastructure Role: ID.BE-2: The organization's place in critical infrastructure and its industry sector is identified and communicated",
+        "Related Controls": "CC2.2\n"
+    },
+    "ID.BE-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.BE-3",
+        "Description": "Priorities: ID.BE-3: Priorities for organizational mission, objectives, and activities are established and communicated",
+        "Related Controls": "CC14.4\n"
+    },
+    "ID.BE-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.BE-4",
+        "Description": "Dependencies: ID.BE-4: Dependencies and critical functions for delivery of critical services are established",
+        "Related Controls": "CC14.7\n"
+    },
+    "ID.BE-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.BE-5",
+        "Description": "Resilience: ID.BE-5: Resilience requirements to support delivery of critical services are established",
+        "Related Controls": "CC14.8\n"
+    },
+    "ID.GV-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.GV-1",
+        "Description": "Security Policy: ID.GV-1: Organizational information security policy is established.",
+        "Related Controls": "CC4.1\n"
+    },
+    "ID.GV-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.GV-2",
+        "Description": "Coordination: ID.GV-2: Information security roles & responsibilities are coordinated and aligned with internal roles and external partners",
+        "Related Controls": "CC2.8\n"
+    },
+    "ID.GV-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.GV-3",
+        "Description": "Legal and regulatory requirements: ID.GV-3: Legal and regulatory requirements regarding cybersecurity, including privacy and civil liberties obligations, are understood and managed.",
+        "Related Controls": "CC3.1\n"
+    },
+    "ID.GV-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.GV-4",
+        "Description": "Governance and risk management processes: ID.GV-4: Governance and risk management processes address cybersecurity risks.",
+        "Related Controls": "CC5.2\n"
+    },
+    "ID.RA-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RA-1",
+        "Description": "Identify vulnerabilities: ID.RA-1: Asset vulnerabilities are identified and documented.",
+        "Related Controls": "CC5.1\n"
+    },
+    "ID.RA-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RA-2",
+        "Description": "Information sharing forums: ID.RA-2: Threat and vulnerability information is received from information sharing forums and sources",
+        "Related Controls": "CC17.6\n"
+    },
+    "ID.RA-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RA-3",
+        "Description": "Identify threats: ID.RA-3: Threats, both internal and external, are identified and documented.",
+        "Related Controls": "CC17.5\n"
+    },
+    "ID.RA-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RA-4",
+        "Description": "Identify impacts: ID.RA-4: Potential business impacts and likelihoods are identified.",
+        "Related Controls": "CC18.7\nCC19.7\n"
+    },
+    "ID.RA-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RA-5",
+        "Description": "Determining risk: ID.RA-5: Threats, vulnerabilities, likelihoods, and impacts are used to determine risk.",
+        "Related Controls": "CC14.9\nCC14.10\nCC17.7\n"
+    },
+    "ID.RA-6": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RA-6",
+        "Description": "Risk responses: ID.RA-6: Risk responses are identified and prioritized",
+        "Related Controls": "CC17.8\n"
+    },
+    "ID.RM-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RM-1",
+        "Description": "Risk management processes: ID.RM-1: Risk management processes are established, managed, and agreed to by organizational stakeholders.",
+        "Related Controls": "CC17.9\n"
+    },
+    "ID.RM-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RM-2",
+        "Description": "Organizational risk tolerance: ID.RM-2: Organizational risk tolerance is determined and clearly expressed.",
+        "Related Controls": "CC17.10\n"
+    },
+    "ID.RM-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.RM-3",
+        "Description": "Risk tolerance determination: ID.RM-3: The organization's determination of risk tolerance is informed by its role in critical infrastructure and sector specific risk analysis.",
+        "Related Controls": "CC17.11\n"
+    },
+    "ID.SC-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.SC-1",
+        "Description": "Supply Chain Risk Management: ID.SC-1: Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders.",
+        "Related Controls": "NISTCSF-1\n"
+    },
+    "ID.SC-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.SC-2",
+        "Description": "Supply Chain Risk Assessment: ID.SC-2: Suppliers and third party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process.",
+        "Related Controls": "NISTCSF-2\n"
+    },
+    "ID.SC-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.SC-3",
+        "Description": "Supply Chain Contracts: ID.SC-3: Contracts with suppliers and third-party partners are used to implement appropriate measures designed to meet the objectives of an organization's cybersecurity program and Cyber Supply Chain Risk Management Plan.",
+        "Related Controls": "NISTCSF-3\n"
+    },
+    "ID.SC-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.SC-4",
+        "Description": "Supply Chain Evaluations: ID.SC-4: Suppliers and third-party partners are routinely assessed using audits, test results, or other forms of evaluations to confirm they are meeting their contractual obligations.",
+        "Related Controls": "NISTCSF-4\n"
+    },
+    "ID.SC-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "ID.SC-5",
+        "Description": "Supply Chain Response and Recovery: ID.SC-5: Response and recovery planning and testing are conducted with suppliers and third-party providers",
+        "Related Controls": "NISTCSF-5\n"
+    },
+    "PR.AC-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-1",
+        "Description": "Identities and credentials: PR.AC-1: Identities and credentials are managed for authorized devices and users.",
+        "Related Controls": "CC7.1\n"
+    },
+    "PR.AC-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-2",
+        "Description": "Physical access: PR.AC-2: Physical access to assets is managed and protected.",
+        "Related Controls": "CC7.2\n"
+    },
+    "PR.AC-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-3",
+        "Description": "Remote access: PR.AC-3: Remote access is managed.",
+        "Related Controls": "CC7.3\n"
+    },
+    "PR.AC-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-4",
+        "Description": "Access permissions: PR.AC-4: Access permissions are managed, incorporating the principles of least privilege and separation of duties",
+        "Related Controls": "CC7.4\n"
+    },
+    "PR.AC-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-5",
+        "Description": "Network integrity: PR.AC-5: Network integrity is protected, incorporating network segregation where appropriate.",
+        "Related Controls": "CC7.5\n"
+    },
+    "PR.AC-6": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-6",
+        "Description": "Identity Proof: PR.AC-6: Identities are proofed and bound to credentials and asserted in interactions",
+        "Related Controls": "CC6.1\n"
+    },
+    "PR.AC-7": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AC-7",
+        "Description": "Authentication: PR.AC-7: Users, devices, and other assets are authenticated (e.g., single-factor, multi-factor) commensurate with the risk of the transaction (e.g., individuals' security and privacy risks and other organizational risks)",
+        "Related Controls": "CC7.36\n"
+    },
+    "PR.AT-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AT-1",
+        "Description": "Training: PR.AT-1: All users are informed and trained.",
+        "Related Controls": "CC16.1\n"
+    },
+    "PR.AT-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AT-2",
+        "Description": "Privileged users: PR.AT-2: Privileged users understand roles & responsibilities.",
+        "Related Controls": "CC2.12\n"
+    },
+    "PR.AT-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AT-3",
+        "Description": "Third-party stakeholders: PR.AT-3: Third-party stakeholders (e.g., suppliers, customers, partners) understand roles & responsibilities",
+        "Related Controls": "CC2.13\n"
+    },
+    "PR.AT-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AT-4",
+        "Description": "Senior executives: PR.AT-4: Senior executives understand roles & responsibilities.",
+        "Related Controls": "CC2.14\n"
+    },
+    "PR.AT-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.AT-5",
+        "Description": "Physical and information security personnel: PR.AT-5: Physical and information security personnel understand roles & responsibilities.",
+        "Related Controls": "CC2.15\n"
+    },
+    "PR.DS-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-1",
+        "Description": "Data-at-rest: PR.DS-1: Data-at-rest is protected",
+        "Related Controls": "CC8.1\n"
+    },
+    "PR.DS-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-2",
+        "Description": "Data-in-transit: PR.DS-2: Data-in-transit is protected.",
+        "Related Controls": "CC13.1\n"
+    },
+    "PR.DS-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-3",
+        "Description": "Asset management: PR.DS-3: Assets are formally managed throughout removal, transfers, and disposition.",
+        "Related Controls": "CC8.2\n"
+    },
+    "PR.DS-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-4",
+        "Description": "Capacity: PR.DS-4: Adequate capacity to ensure availability is maintained",
+        "Related Controls": "CC8.3\n"
+    },
+    "PR.DS-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-5",
+        "Description": "Data leak protection: PR.DS-5: Protections against data leaks are implemented",
+        "Related Controls": "CC8.4\n"
+    },
+    "PR.DS-6": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-6",
+        "Description": "Integrity checking: PR.DS-6: Integrity checking mechanisms are used to verify software, firmware, and information integrity",
+        "Related Controls": "CC8.5\n"
+    },
+    "PR.DS-7": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-7",
+        "Description": "Development & testing environments: PR.DS-7: The development and testing environment(s) are separate from the production environment",
+        "Related Controls": "CC8.6\n"
+    },
+    "PR.DS-8": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.DS-8",
+        "Description": "Hardware Integrity: PR.DS-8: Integrity checking mechanisms are used to verify hardware integrity",
+        "Related Controls": "NISTCSF-7\n"
+    },
+    "PR.IP-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-1",
+        "Description": "Baseline configurations: PR.IP-1: A baseline configuration of information technology/industrial control systems is created and maintained.",
+        "Related Controls": "CC1.5\n"
+    },
+    "PR.IP-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-2",
+        "Description": "System Development Life Cycle: PR.IP-2: A System Development Life Cycle to manage systems is implemented",
+        "Related Controls": "CC8.7\n"
+    },
+    "PR.IP-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-3",
+        "Description": "Configuration change control: PR.IP-3: Configuration change control processes are in place.",
+        "Related Controls": "CC8.8\n"
+    },
+    "PR.IP-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-4",
+        "Description": "Backups: PR.IP-4: Backups of information are conducted, maintained, and tested periodically",
+        "Related Controls": "CC14.13\nCC14.15\n"
+    },
+    "PR.IP-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-5",
+        "Description": "Physical operating environment: PR.IP-5: Policy and regulations regarding the physical operating environment for organizational assets are met.",
+        "Related Controls": "CC11.1\n"
+    },
+    "PR.IP-6": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-6",
+        "Description": "Data destruction: PR.IP-6: Data is destroyed according to policy.",
+        "Related Controls": "CC8.10\n"
+    },
+    "PR.IP-7": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-7",
+        "Description": "Continuous improvement: PR.IP-7: Protection processes are continuously improved.",
+        "Related Controls": "CC8.13\n"
+    },
+    "PR.IP-8": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-8",
+        "Description": "Sharing information: PR.IP-8: Effectiveness of protection technologies is shared with appropriate parties.",
+        "Related Controls": "CC8.14\n"
+    },
+    "PR.IP-9": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-9",
+        "Description": "Incident Response and Business Continuity Plans: PR.IP-9: Response plans (Incident Response and Business Continuity) and recovery plans (Incident Recovery and Disaster Recovery) are in place and managed.",
+        "Related Controls": "CC8.41\nCC14.1\n"
+    },
+    "PR.IP-10": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-10",
+        "Description": "Incident response and recovery plan testing: PR.IP-10: Response and recovery plans are tested.",
+        "Related Controls": "CC14.12\nCC14.18\n"
+    },
+    "PR.IP-11": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-11",
+        "Description": "Human Resource practices: PR.IP-11: Cybersecurity is included in human resources practices (e.g., deprovisioning, personnel screening)",
+        "Related Controls": "CC7.6\n"
+    },
+    "PR.IP-12": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.IP-12",
+        "Description": "Vulnerability management: PR.IP-12: A vulnerability management plan is developed and implemented",
+        "Related Controls": "CC17.2\n"
+    },
+    "PR.MA-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.MA-1",
+        "Description": "Maintenance: PR.MA-1: Maintenance and repair of organizational assets is performed and logged in a timely manner, with approved and controlled tools",
+        "Related Controls": "CC9.2\n"
+    },
+    "PR.MA-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.MA-2",
+        "Description": "Remote maintenance: PR.MA-2: Remote maintenance of organizational assets is approved, logged, and performed in a manner that prevents unauthorized access",
+        "Related Controls": "CC9.4\n"
+    },
+    "PR.PT-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.PT-1",
+        "Description": "Logging & Audit Controls: PR.PT-1: Audit/log records are determined, documented, implemented, and reviewed in accordance with policy",
+        "Related Controls": "CC10.1\n"
+    },
+    "PR.PT-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.PT-2",
+        "Description": "Removable media: PR.PT-2: Removable media is protected and its use restricted according to policy.",
+        "Related Controls": "CC8.15\n"
+    },
+    "PR.PT-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.PT-3",
+        "Description": "Least functionality: PR.PT-3: Access to systems and assets is controlled, incorporating the principle of least functionality.",
+        "Related Controls": "CC8.16\n"
+    },
+    "PR.PT-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.PT-4",
+        "Description": "Communications protection: PR.PT-4: Communications and control networks are protected",
+        "Related Controls": "CC13.5\n"
+    },
+    "PR.PT-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "PR.PT-5",
+        "Description": "Resilience Mechanisms: PR.PT-5: Mechanisms (e.g., failsafe, load balancing, hot swap) are implemented to achieve resilience requirements in normal and adverse situations.",
+        "Related Controls": "NISTCSF-6\n"
+    },
+    "RC.CO-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RC.CO-1",
+        "Description": "Manage public relations: RC.CO-1: Public relations are managed.",
+        "Related Controls": "CC20.4\n"
+    },
+    "RC.CO-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "RC.CO-2",
+        "Description": "Reputation repair: RC.CO-2: Reputation after an event is repaired",
+        "Related Controls": "CC20.5\n"
+    },
+    "RC.CO-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "RC.CO-3",
+        "Description": "Communicate recovery activities: RC.CO-3: Recovery activities are communicated to internal stakeholders and executive and management teams",
+        "Related Controls": "CC20.6\n"
+    },
+    "RC.IM-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RC.IM-1",
+        "Description": "Recovery lessons learned: RC.IM-1: Recovery plans incorporate lessons learned.",
+        "Related Controls": "CC20.2\n"
+    },
+    "RC.IM-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "RC.IM-2",
+        "Description": "Update recovery strategies: RC.IM-2: Recovery strategies are updated.",
+        "Related Controls": "CC20.3\n"
+    },
+    "RC.RP-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RC.RP-1",
+        "Description": "Execute recovery plan: RC.RP-1: Recovery plan is executed during or after an event",
+        "Related Controls": "CC20.1\n"
+    },
+    "RS.AN-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.AN-1",
+        "Description": "Investigate notifications: RS.AN-1: Notifications from detection systems are investigated.\u00c2",
+        "Related Controls": "CC19.8\n"
+    },
+    "RS.AN-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.AN-2",
+        "Description": "Incident impact: RS.AN-2: The impact of the incident is understood.",
+        "Related Controls": "CC18.7\n"
+    },
+    "RS.AN-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.AN-3",
+        "Description": "Perform forensics: RS.AN-3: Forensics are performed.",
+        "Related Controls": "CC19.5\n"
+    },
+    "RS.AN-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.AN-4",
+        "Description": "Categorize incidents: RS.AN-4: Incidents are categorized consistent with response plans.",
+        "Related Controls": "CC19.6\n"
+    },
+    "RS.AN-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.AN-5",
+        "Description": "Vulnerability processes: RS.AN-5: Processes are established to receive, analyze and respond to vulnerabilities disclosed to the organization from internal and external sources (e.g. internal testing, security bulletins, or security researchers)",
+        "Related Controls": "CC17.6\n"
+    },
+    "RS.CO-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.CO-1",
+        "Description": "Response roles and responsibilities.: RS.CO-1: Personnel know their roles and order of operations when a response is needed.",
+        "Related Controls": "CC19.14\n"
+    },
+    "RS.CO-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.CO-2",
+        "Description": "Event reporting: RS.CO-2: Events are reported consistent with established criteria.",
+        "Related Controls": "CC19.15\nCC19.16\n"
+    },
+    "RS.CO-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.CO-3",
+        "Description": "Response information sharing: RS.CO-3: Information is shared consistent with response plans.",
+        "Related Controls": "CC19.17\n"
+    },
+    "RS.CO-4": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.CO-4",
+        "Description": "Response coordination: RS.CO-4: Coordination with stakeholders occurs consistent with response plans",
+        "Related Controls": "CC19.19\n"
+    },
+    "RS.CO-5": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.CO-5",
+        "Description": "Voluntary information sharing: RS.CO-5: Voluntary information sharing occurs with external stakeholders to achieve broader cybersecurity situational awareness",
+        "Related Controls": "CC19.20\n"
+    },
+    "RS.IM-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.IM-1",
+        "Description": "Response lessons learned: RS.IM-1: Response plans incorporate lessons learned.",
+        "Related Controls": "CC19.21\n"
+    },
+    "RS.IM-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.IM-2",
+        "Description": "Update response strategies: RS.IM-2: Response strategies are updated",
+        "Related Controls": "CC19.22\n"
+    },
+    "RS.MI-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.MI-1",
+        "Description": "Contain incidents: RS.MI-1: Incidents are contained",
+        "Related Controls": "CC19.3\n"
+    },
+    "RS.MI-2": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.MI-2",
+        "Description": "Mitigate incidents: RS.MI-2: Incidents are mitigated",
+        "Related Controls": "CC19.4\n"
+    },
+    "RS.MI-3": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.MI-3",
+        "Description": "Newly identified vulnerabilities: RS.MI-3: Newly identified vulnerabilities are mitigated or documented as accepted risks.",
+        "Related Controls": "CC17.12\n"
+    },
+    "RS.RP-1": {
+        "Standard": "NIST CSF",
+        "Requirement": "RS.RP-1",
+        "Description": "Execute response plans: RS.RP-1: Response plan is executed during or after an event.",
+        "Related Controls": "CC19.1\n"
+    }
+}

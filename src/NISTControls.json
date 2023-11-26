@@ -1,0 +1,1207 @@
+{
+    "CC1.1": {
+        "Response": "Unknown",
+        "Control ID": "CC1.1",
+        "Description": "Inventories: \nEstablish and maintain inventories of organizational systems (including hardware, portable media, mobile devices, industrial control systems, physical security systems, software, cloud services, and firmware) throughout the respective system development life cycles.",
+        "NIST CSF": "ID.AM-1 \nID.AM-2 \nID.AM-3 \nID.AM-4"
+        
+
+    },
+    "CC1.1 for SA.A.1": {
+        "Response": "Unknown",
+        "Control ID": "CC1.1 for SA.A.1",
+        "Description": "Inventories for SA A.1: \nEstablish and maintain inventories of organizational systems (including hardware, portable media, mobile devices, industrial control systems, physical security systems, software, cloud services, and firmware) throughout the respective system development life cycles.",
+        "NIST CSF": "ID.AM-1 \nID.AM-2 \nID.AM-3 \nID.AM-4"
+        
+        
+        
+        
+        
+    },
+    "CC1.2": {
+        "Response": "Unknown",
+        "Control ID": "CC1.2",
+        "Description": "Data Locations: \nLocate and identify all organizational data, including data stored on local devices, mobile devices, servers, mass storage, portable media, and cloud platforms.",
+        "NIST CSF": "ID.AM-3"
+        
+        
+        
+        
+        
+    },
+    "CC1.3": {
+        "Response": "Unknown",
+        "Control ID": "CC1.3",
+        "Description": "Data Flow Mapping: \nCreate a map of how data flows within and in/out of the organization.",
+        "NIST CSF": "ID.AM-3"
+        
+        
+        
+        
+        
+    },
+    "CC1.5": {
+        "Response": "Unknown",
+        "Control ID": "CC1.5",
+        "Description": "Baseline Configurations: \nEstablish and maintain baseline configurations of organizational systems (including hardware, portable media, mobile devices, industrial control systems, physical security systems, software, cloud services, firmware, and reporting requirements) throughout the respective system development life cycles.",
+        "NIST CSF": "PR.IP-1 \nDE.AE-1"
+        
+        
+        
+        
+    },
+    "CC2.1": {
+        "Response": "Unknown",
+        "Control ID": "CC2.1",
+        "Description": "Organization's Supply Chain Role: \nIdentify and communicate the organization's role in the supply chain.",
+        "NIST CSF": "ID.BE-1"
+        
+        
+        
+        
+        
+    },
+    "CC2.2": {
+        "Response": "Unknown",
+        "Control ID": "CC2.2",
+        "Description": "Organization's Critical Infrastructure Role: \nIdentify and communicate the organization's role in critical infrastructure.",
+        "NIST CSF": "ID.BE-2"
+        
+        
+        
+        
+        
+    },
+    "CC2.4": {
+        "Response": "Unknown",
+        "Control ID": "CC2.4",
+        "Description": "Workforce Cybersecurity Roles & Responsibilities: \nEstablish and document cybersecurity roles and responsibilities within the workforce.",
+        "NIST CSF": "ID.AM-6"
+        
+        
+        
+        
+        
+    },
+    "CC2.8": {
+        "Response": "Unknown",
+        "Control ID": "CC2.8",
+        "Description": "Roles & Responsibilities Coordination: \nCoordinate and align information security roles & responsibilities with internal roles and external partners.",
+        "NIST CSF": "ID.GV-2"
+        
+        
+        
+        
+        
+    },
+    "CC2.11": {
+        "Response": "Unknown",
+        "Control ID": "CC2.11",
+        "Description": "Detection Roles & Responsibilities: \nEnsure that roles and responsibilities for detection are well defined to ensure accountability.",
+        "NIST CSF": "DE.DP-1"
+        
+        
+        
+        
+        
+    },
+    "CC2.12": {
+        "Response": "Unknown",
+        "Control ID": "CC2.12",
+        "Description": "Privileged Users: \nEnsure privileged users understand roles & responsibilities ",
+        "NIST CSF": "PR.AT-2"
+        
+        
+        
+        
+        
+    },
+    "CC2.13": {
+        "Response": "Unknown",
+        "Control ID": "CC2.13",
+        "Description": "Third-Parties: \nEnsure third-party stakeholders (e.g., suppliers, customers, partners) understand roles & responsibilities ",
+        "NIST CSF": "PR.AT-3"
+        
+        
+        
+        
+        
+    },
+    "CC2.14": {
+        "Response": "Unknown",
+        "Control ID": "CC2.14",
+        "Description": "Senior Executives: \nEnsure senior executives understand roles & responsibilities.",
+        "NIST CSF": "PR.AT-4"
+        
+        
+        
+        
+        
+    },
+    "CC2.15": {
+        "Response": "Unknown",
+        "Control ID": "CC2.15",
+        "Description": "Physical Security Personnel: \nEnsure physical security personnel understand their roles & responsibilities and are trained to perform them.",
+        "NIST CSF": "PR.AT-5"
+        
+        
+        
+        
+        
+    },
+    "CC3.1": {
+        "Response": "Unknown",
+        "Control ID": "CC3.1",
+        "Description": "Legal and Regulatory Requirements: \nIdentify and manage all legal and regulatory requirements.",
+        "NIST CSF": "ID.GV-3"
+        
+        
+        
+        
+        
+    },
+    "CC4.1": {
+        "Response": "Unknown",
+        "Control ID": "CC4.1",
+        "Description": "Written Cybersecurity Policies: \nWrite policies addressing all cybersecurity requirements.",
+        "NIST CSF": "ID.GV-1"
+        
+        
+        
+        
+        
+    },
+    "CC5.1": {
+        "Response": "Unknown",
+        "Control ID": "CC5.1",
+        "Description": "Risk Assessment/Risk Analysis: \nPeriodically conduct an accurate and thorough assessment of the risks to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals, resulting from the operation of organizational systems and the associated processing, storage, or transmission of data.",
+        "NIST CSF": "ID.RA-1"
+        
+        
+        
+        
+        
+    },
+    "CC5.2": {
+        "Response": "Unknown",
+        "Control ID": "CC5.2",
+        "Description": "Prioritize Risks: \nPrioritize risks according to the defined risk categories, risk sources, and risk measurement criteria.",
+        "NIST CSF": "ID.GV-4"
+        
+        
+        
+        
+        
+    },
+    "CC6.1": {
+        "Response": "Unknown",
+        "Control ID": "CC6.1",
+        "Description": "Screen Individuals: \nScreen individuals prior to authorizing access to organizational systems.",
+        "NIST CSF": "PR.AC-6"
+        
+        
+        
+        
+        
+    },
+    "CC7.1": {
+        "Response": "Unknown",
+        "Control ID": "CC7.1",
+        "Description": "Identity Management: \nManage identities and credentials for authorized devices and users.",
+        "NIST CSF": "PR.AC-1"
+        
+        
+        
+        
+        
+    },
+    "CC7.2": {
+        "Response": "Unknown",
+        "Control ID": "CC7.2",
+        "Description": "Physical Access Management: \nManage and protect physical access to assets.",
+        "NIST CSF": "PR.AC-2"
+        
+        
+        
+        
+        
+    },
+    "CC7.3": {
+        "Response": "Unknown",
+        "Control ID": "CC7.3",
+        "Description": "Remote Access Management: \nManage remote access to assets.",
+        "NIST CSF": "PR.AC-3"
+        
+        
+        
+        
+        
+    },
+    "CC7.4": {
+        "Response": "Unknown",
+        "Control ID": "CC7.4",
+        "Description": "Access Permission Management: \nManage access permissions, incorporating the principles of least privilege and separation of duties.",
+        "NIST CSF": "PR.AC-4"
+        
+        
+        
+        
+        
+    },
+    "CC7.5": {
+        "Response": "Unknown",
+        "Control ID": "CC7.5",
+        "Description": "Network Segregation: \nProtect network integrity, incorporating network segregation where appropriate.",
+        "NIST CSF": "PR.AC-5"
+        
+        
+        
+        
+        
+    },
+    "CC7.6": {
+        "Response": "Unknown",
+        "Control ID": "CC7.6",
+        "Description": "HR Cybersecurity Alignment: \nEnsure that cybersecurity is included in human resources practices (e.g., deprovisioning, personnel screening).",
+        "NIST CSF": "PR.IP-11"
+        
+        
+        
+        
+        
+    },
+    "CC7.36": {
+        "Response": "Unknown",
+        "Control ID": "CC7.36",
+        "Description": "Multifactor Authentication (MFA): \nUse multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts.",
+        "NIST CSF": "PR.AC-7"
+        
+        
+        
+        
+        
+    },
+    "CC8.1": {
+        "Response": "Unknown",
+        "Control ID": "CC8.1",
+        "Description": "Protect Data: \nEnsure data-at-rest (stored) is protected.",
+        "NIST CSF": "PR.DS-1"
+        
+        
+        
+        
+        
+    },
+    "CC8.2": {
+        "Response": "Unknown",
+        "Control ID": "CC8.2",
+        "Description": "Manage Assets: \nEnsure assets are formally managed throughout removal, transfers, and disposition.",
+        "NIST CSF": "PR.DS-3"
+        
+        
+        
+        
+        
+    },
+    "CC8.3": {
+        "Response": "Unknown",
+        "Control ID": "CC8.3",
+        "Description": "Ensure Adequate Capacity: \nEnsure there is adequate capacity to ensure availability is maintained.",
+        "NIST CSF": "PR.DS-4"
+        
+        
+        
+        
+        
+    },
+    "CC8.4": {
+        "Response": "Unknown",
+        "Control ID": "CC8.4",
+        "Description": "Protect Against Data Leaks: \nProtections against data leaks are implemented.",
+        "NIST CSF": "PR.DS-5"
+        
+        
+        
+        
+        
+    },
+    "CC8.5": {
+        "Response": "Unknown",
+        "Control ID": "CC8.5",
+        "Description": "Integrity Checking: \nUse integrity checking mechanisms to verify software, firmware, and information integrity.",
+        "NIST CSF": "PR.DS-6"
+        
+        
+        
+        
+        
+    },
+    "CC8.6": {
+        "Response": "Unknown",
+        "Control ID": "CC8.6",
+        "Description": "Separate Development & Testing Environments: \nSeparate development and testing environment(s) from the production environment.",
+        "NIST CSF": "PR.DS-7"
+        
+        
+        
+        
+        
+    },
+    "CC8.7": {
+        "Response": "Unknown",
+        "Control ID": "CC8.7",
+        "Description": "Implement Life Cycle: \nImplement a System Development Life Cycle to manage systems.",
+        "NIST CSF": "PR.IP-2"
+        
+        
+        
+        
+        
+    },
+    "CC8.8": {
+        "Response": "Unknown",
+        "Control ID": "CC8.8",
+        "Description": "Change Controls: \nEnsure configuration change control processes are in place.",
+        "NIST CSF": "PR.IP-3"
+        
+        
+        
+        
+        
+    },
+    "CC8.10": {
+        "Response": "Unknown",
+        "Control ID": "CC8.10",
+        "Description": "Data Destruction: \nEnsure data is destroyed according to policy, including deleting data no longer required for business purposes, and beyond any regulated retention period.",
+        "NIST CSF": "PR.IP-6"
+        
+        
+        
+        
+        
+    },
+    "CC8.13": {
+        "Response": "Unknown",
+        "Control ID": "CC8.13",
+        "Description": "Improve Processes: \nContinuously improve data protection processes.",
+        "NIST CSF": "PR.IP-7"
+        
+        
+        
+        
+        
+    },
+    "CC8.14": {
+        "Response": "Unknown",
+        "Control ID": "CC8.14",
+        "Description": "Share Effectiveness Information: \nShare the effectiveness of protection technologies with appropriate parties.",
+        "NIST CSF": "PR.IP-8"
+        
+        
+        
+        
+    },
+    "CC8.15": {
+        "Response": "Unknown",
+        "Control ID": "CC8.15",
+        "Description": "Protect & Restrict Removable Media: \nEnsure that removable media is protected and its use restricted according to policy.",
+        "NIST CSF": "PR.PT-2"
+    
+        
+        
+        
+        
+    },
+    "CC8.16": {
+        "Response": "Unknown",
+        "Control ID": "CC8.16",
+        "Description": "Control & Limit Access: \nEnsure that access to systems and assets is controlled, incorporating the principle of least functionality.",
+        "NIST CSF": "PR.PT-3"
+        
+        
+        
+        
+        
+    },
+    "CC8.41": {
+        "Response": "Unknown",
+        "Control ID": "CC8.41",
+        "Description": "Incident Management Process: \nEstablish an operational incident-handling capability for organizational systems that includes preparation, detection, analysis, containment, recovery, and user response activities.",
+        "NIST CSF": "PR.IP-9"
+        
+        
+        
+        
+        
+    },
+    "CC9.2": {
+        "Response": "Unknown",
+        "Control ID": "CC9.2",
+        "Description": "Perform & Control Maintenance & Repairs: \nEnsure maintenance and repair of organizational assets is performed and logged in a timely manner, with approved and controlled tools.",
+        "NIST CSF": "PR.MA-1"
+        
+        
+        
+        
+        
+    },
+    "CC9.4": {
+        "Response": "Unknown",
+        "Control ID": "CC9.4",
+        "Description": "Manage Remote Maintenance: \nEnsure that remote maintenance of organizational assets is approved, logged, and performed in a manner that prevents unauthorized access.",
+        "NIST CSF": "PR.MA-2"
+        
+        
+        
+        
+        
+    },
+    "CC10.1": {
+        "Response": "Unknown",
+        "Control ID": "CC10.1",
+        "Description": "Implement Logging/Audit Controls: \nEnsure that audit/log records are implemented to record and examine activities on local devices, network devices, and cloud services.",
+        "NIST CSF": "PR.PT-1"
+        
+        
+        
+        
+        
+    },
+    "CC11.1": {
+        "Response": "Unknown",
+        "Control ID": "CC11.1",
+        "Description": "Physical Access Policies: \nImplement policies and procedures to safeguard the facility and the equipment therein from unauthorized physical access, tampering, and theft.",
+        "NIST CSF": "PR.IP-5"
+        
+        
+        
+        
+        
+    },
+    "CC13.1": {
+        "Response": "Unknown",
+        "Control ID": "CC13.1",
+        "Description": "In-transit Data Protection: \nEnsure data-in-transit is protected.",
+        "NIST CSF": "PR.DS-2"
+        
+        
+        
+        
+        
+    },
+    "CC13.5": {
+        "Response": "Unknown",
+        "Control ID": "CC13.5",
+        "Description": "Monitor, Control, and Protect Communications: \nMonitor, control, and protect organizational communications (i.e., information transmitted or received by organizational information systems) at the external boundaries and key internal boundaries of the information systems.",
+        "NIST CSF": "PR.PT-4"
+        
+        
+        
+        
+        
+    },
+    "CC14.1": {
+        "Response": "Unknown",
+        "Control ID": "CC14.1",
+        "Description": "Business Continuity & Disaster Recovery Plans: \nWrite effective Business Continuity and Disaster Recovery plans that meet all regulatory requirements and are in place and managed.",
+        "NIST CSF": "PR.IP-9"
+        
+        
+        
+        
+        
+    },
+    "CC14.2": {
+        "Response": "Unknown",
+        "Control ID": "CC14.2",
+        "Description": "Resource Criticality: \nEstablish and communicate the criticality of all resources.",
+        "NIST CSF": "ID.AM-5"
+        
+        
+        
+        
+        
+    },
+    "CC14.4": {
+        "Response": "Unknown",
+        "Control ID": "CC14.4",
+        "Description": "Organizational Priorities: \nEstablish and communicate priorities based on the organization's mission, objectives, activities, legal requirements, and regulations.",
+        "NIST CSF": "ID.BE-3"
+        
+        
+        
+        
+        
+    },
+    "CC14.7": {
+        "Response": "Unknown",
+        "Control ID": "CC14.7",
+        "Description": "Dependencies: \nIdentify and document all dependencies for each critical function. Include technology, people, and facilities.",
+        "NIST CSF": "ID.BE-4"
+        
+        
+        
+        
+        
+    },
+    "CC14.8": {
+        "Response": "Unknown",
+        "Control ID": "CC14.8",
+        "Description": "Resiliency Requirements: \nEstablish resilience requirements to support the delivery of critical services.",
+        "NIST CSF": "ID.BE-5"
+        
+        
+        
+        
+        
+    },
+    "CC14.9": {
+        "Response": "Unknown",
+        "Control ID": "CC14.9",
+        "Description": "Business Impact Analysis: \nConduct Business Impact Analyses (BIA) with all departments to measure the financial, regulatory, and reputational impact of incidents.",
+        "NIST CSF": "ID.RA-5"
+        
+        
+        
+        
+        
+    },
+    "CC14.10": {
+        "Response": "Unknown",
+        "Control ID": "CC14.10",
+        "Description": "Likelihood Analysis: \nDetermine the likelihood of an incident based on historical information and other resources.",
+        "NIST CSF": "ID.RA-5"
+        
+        
+        
+        
+        
+    },
+    "CC14.12": {
+        "Response": "Unknown",
+        "Control ID": "CC14.12",
+        "Description": "Data Backup Plan: \nWrite a comprehensive data backup plan that identifies the locations of all business-critical and regulated data, and the detailed process used to create and test backups.",
+        "NIST CSF": "PR.IP-10"
+        
+        
+        
+        
+        
+    },
+    "CC14.13": {
+        "Response": "Unknown",
+        "Control ID": "CC14.13",
+        "Description": "Backups: \nEnsure all business-critical and regulated data is backed up regularly to meet the organization's recovery priorities. Include local devices, hosted environments, and software-as-a-service platforms. Backups must be complete and comprehensive enough to restore critical functions. ",
+        "NIST CSF": "PR.IP-4"
+        
+        
+        
+        
+        
+    },
+    "CC14.15": {
+        "Response": "Unknown",
+        "Control ID": "CC14.15",
+        "Description": "Restoration Testing: \nEnsure that backups are fully tested on a regular schedule to ensure that recoveries can take place as planned.",
+        "NIST CSF": "PR.IP-4"
+        
+        
+        
+        
+        
+    },
+    "CC14.18": {
+        "Response": "Unknown",
+        "Control ID": "CC14.18",
+        "Description": "Recovery Capability Testing: \nEnsure that restoration testing proves that the RTO and RPO's can be met. If not, adjust the RTO and RPO to what has been proven to be possible, or change the processes to meet the desired RTO and RPO.",
+        "NIST CSF": "PR.IP-10"
+        
+        
+        
+        
+        
+    },
+    "CC16.1": {
+        "Response": "Unknown",
+        "Control ID": "CC16.1",
+        "Description": "Workforce Training: \nImplement workforce training that covers all required policies and procedures.",
+        "NIST CSF": "PR.AT-1"
+        
+        
+        
+        
+        
+    },
+    "CC17.1": {
+        "Response": "Unknown",
+        "Control ID": "CC17.1",
+        "Description": "Vulnerability Scans: \nScan for vulnerabilities and encryption status in organizational systems and applications periodically and when new vulnerabilities affecting those systems and applications are identified.",
+        "NIST CSF": "DE.CM-8"
+        
+        
+        
+        
+        
+    },
+    "CC17.2": {
+        "Response": "Unknown",
+        "Control ID": "CC17.2",
+        "Description": "Vulnerability Plan: \nEnsure that a written vulnerability management plan is developed and implemented.",
+        "NIST CSF": "PR.IP-12"
+        
+        
+        
+        
+        
+    },
+    "CC17.5": {
+        "Response": "Unknown",
+        "Control ID": "CC17.5",
+        "Description": "Identify Threats: \nIdentify and document threats, both internal and external.",
+        "NIST CSF": "ID.RA-3"
+        
+        
+        
+        
+        
+    },
+    "CC17.6": {
+        "Response": "Unknown",
+        "Control ID": "CC17.6",
+        "Description": "Threat and Vulnerability Information: \nReceive and respond to threat and vulnerability information from information sharing forums and sources and communicate to stakeholders.",
+        "NIST CSF": "ID.RA-2 \nRS.AN-5"
+        
+        
+        
+        
+        
+    },
+    "CC17.7": {
+        "Response": "Unknown",
+        "Control ID": "CC17.7",
+        "Description": "Risk Determination: \nDetermine risk using threats, vulnerabilities, likelihoods, and impacts.",
+        "NIST CSF": "ID.RA-5"
+        
+        
+        
+        
+        
+    },
+    "CC17.8": {
+        "Response": "Unknown",
+        "Control ID": "CC17.8",
+        "Description": "Risk Responses: \nRisk responses are identified and prioritized.",
+        "NIST CSF": "ID.RA-6"
+        
+        
+        
+        
+        
+    },
+    "CC17.9": {
+        "Response": "Unknown",
+        "Control ID": "CC17.9",
+        "Description": "Risk Management: \nEstablish and manage risk management processes as agreed to by organizational stakeholders.",
+        "NIST CSF": "ID.RM-1"
+        
+        
+        
+        
+        
+    },
+    "CC17.10": {
+        "Response": "Unknown",
+        "Control ID": "CC17.10",
+        "Description": "Risk Tolerance: \nOrganization risk tolerance is determined and clearly expressed.",
+        "NIST CSF": "ID.RM-2"
+        
+        
+        
+        
+        
+    },
+    "CC17.11": {
+        "Response": "Unknown",
+        "Control ID": "CC17.11",
+        "Description": "Risk Tolerance Alignment: \nRisk management aligns with all legal and regulatory requirements, the organization's role in critical infrastructure, and a sector-specific risk analysis.",
+        "NIST CSF": "ID.RM-3"
+        
+        
+        
+        
+        
+    },
+    "CC17.12": {
+        "Response": "Unknown",
+        "Control ID": "CC17.12",
+        "Description": "Newly-Identified Vulnerabilities: \nEnsure that newly identified vulnerabilities are mitigated or documented as accepted risks.",
+        "NIST CSF": "RS.MI-3"
+        
+        
+        
+        
+        
+    },
+    "CC18.2": {
+        "Response": "Unknown",
+        "Control ID": "CC18.2",
+        "Description": "Triage Events: \nAnalyze and triage events to support event resolution and incident declaration.",
+        "NIST CSF": "DE.AE-2"
+        
+        
+        
+        
+        
+    },
+    "CC18.6": {
+        "Response": "Unknown",
+        "Control ID": "CC18.6",
+        "Description": "Event Data Correlation: \nEnsure that event data are aggregated and correlated from multiple sources and sensors.",
+        "NIST CSF": "DE.AE-3"
+        
+        
+        
+        
+        
+    },
+    "CC18.7": {
+        "Response": "Unknown",
+        "Control ID": "CC18.7",
+        "Description": "Event Impact Determination: \nEnsure that the impact of events is determined.",
+        "NIST CSF": "ID.RA-4 \nDE.AE-4 \nRS.AN-2"
+        
+        
+        
+        
+        
+    },
+    "CC18.8": {
+        "Response": "Unknown",
+        "Control ID": "CC18.8",
+        "Description": "Incident Alert Thresholds: \nEnsure that incident alert thresholds are established.",
+        "NIST CSF": "DE.AE-5"
+        
+        
+        
+        
+        
+    },
+    "CC18.10": {
+        "Response": "Unknown",
+        "Control ID": "CC18.10",
+        "Description": "Physical Environment Monitoring: \n",
+        "NIST CSF": "DE.CM-2"
+        
+        
+        
+        
+        
+    },
+    "CC18.11": {
+        "Response": "Unknown",
+        "Control ID": "CC18.11",
+        "Description": "Personnel Activity Monitoring: \nEnsure that personnel activity is monitored to detect potential cybersecurity events.",
+        "NIST CSF": "DE.CM-3"
+        
+        
+        
+        
+        
+    },
+    "CC18.12": {
+        "Response": "Unknown",
+        "Control ID": "CC18.12",
+        "Description": "Malicious Code Detection: \nEnsure that malicious code is detected.",
+        "NIST CSF": "DE.CM-4"
+        
+        
+        
+        
+        
+    },
+    "CC18.13": {
+        "Response": "Unknown",
+        "Control ID": "CC18.13",
+        "Description": "Mobile Code Detection: \nEnsure that unauthorized mobile code is detected.",
+        "NIST CSF": "DE.CM-5"
+        
+        
+        
+        
+        
+    },
+    "CC18.14": {
+        "Response": "Unknown",
+        "Control ID": "CC18.14",
+        "Description": "Monitor Service Provider Activity: \nEnsure that external service provider activity is monitored to detect potential cybersecurity events.",
+        "NIST CSF": "DE.CM-6"
+        
+        
+        
+        
+        
+    },
+    "CC18.15": {
+        "Response": "Unknown",
+        "Control ID": "CC18.15",
+        "Description": "Monitoring: \nEnsure that monitoring the network for unauthorized personnel, connections, devices, and software is performed.",
+        "NIST CSF": "DE.CM-1 \nDE.CM-7"
+        
+        
+        
+        
+        
+    },
+    "CC18.16": {
+        "Response": "Unknown",
+        "Control ID": "CC18.16",
+        "Description": "Detection Compliance: \nEnsure that detection activities comply with all applicable requirements.",
+        "NIST CSF": "DE.DP-2"
+        
+        
+        
+        
+        
+    },
+    "CC18.17": {
+        "Response": "Unknown",
+        "Control ID": "CC18.17",
+        "Description": "Test Detection Processes: \nEnsure that detection processes are tested.",
+        "NIST CSF": "DE.DP-3"
+        
+        
+        
+        
+        
+    },
+    "CC18.18": {
+        "Response": "Unknown",
+        "Control ID": "CC18.18",
+        "Description": "Detection Information Communications: \nEnsure that event detection information is communicated to appropriate parties.",
+        "NIST CSF": "DE.DP-4"
+        
+        
+        
+        
+        
+    },
+    "CC18.19": {
+        "Response": "Unknown",
+        "Control ID": "CC18.19",
+        "Description": "Improve Detection Processes: \nEnsure that detection processes are continuously improved.",
+        "NIST CSF": "DE.DP-5"
+        
+        
+        
+        
+        
+    },
+    "CC19.1": {
+        "Response": "Unknown",
+        "Control ID": "CC19.1",
+        "Description": "Incident Response Plan: \nEnsure that an effective Incident Response Plan is in place and managed.",
+        "NIST CSF": "RS.RP-1"
+        
+        
+        
+        
+        
+    },
+    "CC19.3": {
+        "Response": "Unknown",
+        "Control ID": "CC19.3",
+        "Description": "Contain Incidents: \nEnsure that incidents are contained.",
+        "NIST CSF": "RS.MI-1"
+        
+        
+        
+        
+        
+    },
+    "CC19.4": {
+        "Response": "Unknown",
+        "Control ID": "CC19.4",
+        "Description": "Mitigate Incidents: \nEnsure that incidents are mitigated.",
+        "NIST CSF": "RS.MI-2"
+        
+        
+        
+        
+        
+    },
+    "CC19.5": {
+        "Response": "Unknown",
+        "Control ID": "CC19.5",
+        "Description": "Perform Forensics: \nEnsure that forensics are performed.",
+        "NIST CSF": "RS.AN-3"
+        
+        
+        
+        
+        
+    },
+    "CC19.6": {
+        "Response": "Unknown",
+        "Control ID": "CC19.6",
+        "Description": "Categorize Incidents: \nEnsure that incidents are categorized consistent with response plans.",
+        "NIST CSF": "RS.AN-4"
+        
+        
+        
+        
+        
+    },
+    "CC19.7": {
+        "Response": "Unknown",
+        "Control ID": "CC19.7",
+        "Description": "Understand Incident Impact: \nEnsure that the impact of an incident is understood.",
+        "NIST CSF": "ID.RA-4"
+        
+        
+        
+        
+        
+    },
+    "CC19.8": {
+        "Response": "Unknown",
+        "Control ID": "CC19.8",
+        "Description": "Investigate Detection System Notifications: \nEnsure that notifications from detection systems are investigated.",
+        "NIST CSF": "RS.AN-1"
+        
+        
+        
+        
+        
+    },
+    "CC19.14": {
+        "Response": "Unknown",
+        "Control ID": "CC19.14",
+        "Description": "Personnel Incident Responsibilities: \nEnsure that personnel know their roles, limitations, and order of operations when a response is needed.",
+        "NIST CSF": "RS.CO-1"
+        
+        
+        
+        
+        
+    },
+    "CC19.15": {
+        "Response": "Unknown",
+        "Control ID": "CC19.15",
+        "Description": "Incident Reporting Determination: \nDetermine that the incident meets the requirements for reporting.",
+        "NIST CSF": "RS.CO-2"
+        
+        
+        
+        
+        
+    },
+    "CC19.16": {
+        "Response": "Unknown",
+        "Control ID": "CC19.16",
+        "Description": "Incident Documentation & Reporting: \nEnsure that events are documented and reported consistent with established criteria, including all legal and regulatory requirements.",
+        "NIST CSF": "RS.CO-2"
+        
+        
+        
+        
+        
+    },
+    "CC19.17": {
+        "Response": "Unknown",
+        "Control ID": "CC19.17",
+        "Description": "Incident Information Sharing: \nEnsure that information is shared consistent with response plans.",
+        "NIST CSF": "RS.CO-3"
+        
+        
+        
+        
+        
+    },
+    "CC19.19": {
+        "Response": "Unknown",
+        "Control ID": "CC19.19",
+        "Description": "Stakeholder Incident Coordination: \nEnsure that coordination with stakeholders occurs consistent with response plans, legal advice, law enforcement requirements, and direction from the insurance company.",
+        "NIST CSF": "RS.CO-4"
+        
+        
+        
+        
+        
+    },
+    "CC19.20": {
+        "Response": "Unknown",
+        "Control ID": "CC19.20",
+        "Description": "Stakeholder Information Sharing: \nEnsure that voluntary information sharing occurs with external stakeholders to achieve broader cybersecurity situational awareness, consistent with response plans, legal advice, law enforcement requirements, and direction from the insurance company.",
+        "NIST CSF": "RS.CO-5"
+        
+        
+        
+        
+        
+    },
+    "CC19.21": {
+        "Response": "Unknown",
+        "Control ID": "CC19.21",
+        "Description": "Response Plan Lessons Learned: \n",
+        "NIST CSF": "RS.IM-1"
+        
+        
+        
+        
+        
+    },
+    "CC19.22": {
+        "Response": "Unknown",
+        "Control ID": "CC19.22",
+        "Description": "Update Response Strategies: \nEnsure response strategies are updated.",
+        "NIST CSF": "RS.IM-2"
+        
+        
+        
+        
+        
+    },
+    "CC20.1": {
+        "Response": "Unknown",
+        "Control ID": "CC20.1",
+        "Description": "Follow Incident Recovery Plan: \nImplement an incident handling capability for incidents that is consistent with the incident response plan and includes preparation, detection and analysis, containment, eradication, and recovery",
+        "NIST CSF": "RC.RP-1"
+        
+        
+        
+        
+        
+    },
+    "CC20.2": {
+        "Response": "Unknown",
+        "Control ID": "CC20.2",
+        "Description": "Recovery Plan Lessons Learned: \nEnsure recovery plans incorporate lessons learned.",
+        "NIST CSF": "RC.IM-1"
+        
+        
+        
+        
+        
+    },
+    "CC20.3": {
+        "Response": "Unknown",
+        "Control ID": "CC20.3",
+        "Description": "Update Recovery Strategies: \nEnsure recovery strategies are updated.",
+        "NIST CSF": "RC.IM-2"
+        
+        
+        
+        
+        
+    },
+    "CC20.4": {
+        "Response": "Unknown",
+        "Control ID": "CC20.4",
+        "Description": "Manage Public Relations: \nEnsure public relations are managed.",
+        "NIST CSF": "RC.CO-1"
+        
+        
+        
+        
+        
+    },
+    "CC20.5": {
+        "Response": "Unknown",
+        "Control ID": "CC20.5",
+        "Description": "Reputation Repair: \nEnsure that the organization's reputation after an event is repaired.",
+        "NIST CSF": "RC.CO-2"
+        
+        
+        
+        
+        
+    },
+    "CC20.6": {
+        "Response": "Unknown",
+        "Control ID": "CC20.6",
+        "Description": "Communicate Recovery Activities: \nEnsure that recovery activities are communicated to internal stakeholders and executive and management teams.",
+        "NIST CSF": "RC.CO-3"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-1": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-1",
+        "Description": "Supplier and Third-Party Management: \nIdentify and manage all suppliers and third-parties that access organizational data or systems.",
+        "NIST CSF": "ID.SC-1"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-2": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-2",
+        "Description": "Supplier and Third-Party Risk Management: \nConduct risk assessments of all suppliers and third parties that access organizational data or systems.",
+        "NIST CSF": "ID.SC-2"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-3": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-3",
+        "Description": "Supplier and Third-Party Risk Contracts: \nImplement contractual requirements for all suppliers and third parties that access organizational data or systems.",
+        "NIST CSF": "ID.SC-3"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-4": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-4",
+        "Description": "Supplier and Third-Party Risk Assessments: \nConduct assessments/evaluations of all suppliers and third parties that access organizational data or systems.",
+        "NIST CSF": "ID.SC-4"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-5": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-5",
+        "Description": "Supplier and Third-Party Risk Response and Recovery: \nInclude suppliers and third parties that access organizational data or systems in your response and recovery plans and testing.",
+        "NIST CSF": "ID.SC-5"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-6": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-6",
+        "Description": "Resilience Mechanisms: \nImplement mechanisms (e.g., failsafe, load balancing, hot swap) to achieve resilience requirements in normal and adverse situations.",
+        "NIST CSF": "PR.PT-5"
+        
+        
+        
+        
+        
+    },
+    "NISTCSF-7": {
+        "Response": "Unknown",
+        "Control ID": "NISTCSF-7",
+        "Description": "Hardware Integrity: \nUse integrity checking mechanisms  to verify hardware integrity.",
+        "NIST CSF": "PR.DS-8"
+        
+        
+        
+        
+        
+    }
+}

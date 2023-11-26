@@ -1,0 +1,66 @@
+<template>
+    <div id="app">
+      <div class="main-container">
+        <div class="header-container">
+          <h1>Project - {{ this.currentApp.name }}</h1>
+          <h2>Type - {{ this.currentApp.type }}</h2>
+        </div>
+        <h5>Planning Phase</h5>
+        <b-progress :value="30" :max="100" show-progress animated></b-progress>
+        <!-- <b-table sticky-header striped hover :items="$props.nistControl"> -->
+          <b-table sticky-header striped hover :items="Object.values(NistControls)" :fields="this.fields" class="my-table-class">
+            <template #cell(Control-ID)="data">
+                <b-button variant="link" @click="">{{ data.item["Control ID"] }}</b-button>
+            </template>
+            <template #cell(Description)="data">
+                {{ (data.value.length > 100) ? data.value.substring(0, 100) + "..." : data.value }}
+            </template>
+            </b-table>
+        <div>
+          <button 
+            type="button" 
+            class="btn btn-primary" 
+            style="margin-top: 50px;"
+            @click="store.phaseFlag = 0">Back</button>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import NistControls from '../NISTControls.json'
+  export default {
+    name: 'PlanningTools',
+    props: {
+      nistControls: Array,
+      nistRequirements: Object
+    },
+    components: {
+      
+    },
+    computed: {
+      currentApp: function () {
+        const isMatch = (element) => element.id === store.currentAppId 
+        const index = store.userApps.findIndex(isMatch)
+        return store.userApps.at(index)
+      },
+      fields: function () {
+        return ["Control-ID", "Description", "Response"]
+      }
+    }
+  }
+  </script>
+
+    <script setup>
+    import { store } from '../store.js'
+    </script>
+  
+  <style>
+    .row {
+      height: 120px;
+    }
+    .my-table-class {
+      max-height: 400px !important;
+    }
+  </style>
+  

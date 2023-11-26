@@ -6,10 +6,13 @@
 import { generateFilePath } from '@nextcloud/router'
 
 import Vue from 'vue'
+
+// Component imports
 import App from './App.vue'
+
+// Bootstrap imports
 import {BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap'
-
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -23,6 +26,7 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
+// Create and render the new Vue project in the content element of the main.php template
 export default new Vue({
   el: '#content',
   render: h => h(App),

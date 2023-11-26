@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="main-container">
+      <!-- Load each page of the application based on the current state-->
       <Home v-if="store.pageFlag === 0"/>
       <NewApp v-if="store.pageFlag === 1"/>
       <ExistingApp v-if="store.pageFlag === 2"/>
@@ -10,17 +11,19 @@
 
 <script>
 
+// Component imports
 import Home from './pages/Home.vue'
 import NewApp from './pages/NewApp.vue'
 import ExistingApp from './pages/ExistingApp.vue'
 
+// Define Vue component
 export default {
   name: 'App',
   components: {
     Home,
     NewApp,
     ExistingApp
-  }
+  },
 }
 </script>
 
@@ -40,8 +43,8 @@ import { store } from './store.js'
 
 .main-container {
   background-color: aliceblue;
-  width: 600px;
-  height: 600px;
+  width: 1200px;
+  height: 700px;
   margin: 0;
   position: absolute;
   top: 50%;
