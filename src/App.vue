@@ -43,7 +43,7 @@ import { store } from "./store.js";
 .main-container {
   background-color: aliceblue;
   width: 1200px;
-  height: 700px;
+  height: 800px;
   margin: 0;
   position: absolute;
   top: 50%;
