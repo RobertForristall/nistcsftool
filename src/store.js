@@ -17,4 +17,5 @@ export const store = reactive({
   currentAppId: -1,
   userApps: [],
   phaseFlag: 0,
+  selectedControlId: "",
 });

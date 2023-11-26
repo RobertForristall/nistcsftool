@@ -50,6 +50,13 @@ export default {
         if (store.phaseFlag === 0) {
           store.currentAppId = -1;
         } else if (store.phaseFlag === 1) {
+          if (store.selectedControlId === "") {
+            store.phaseFlag = 0;
+          } else {
+            store.selectedControlId = "";
+          }
+        } else if (store.phaseFlag > 1) {
+          // TODO Finish back mappings for these pages
           store.phaseFlag = 0;
         }
       }
