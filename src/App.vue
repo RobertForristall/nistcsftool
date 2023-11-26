@@ -2,33 +2,32 @@
   <div id="app">
     <div class="main-container">
       <!-- Load each page of the application based on the current state-->
-      <Home v-if="store.pageFlag === 0"/>
-      <NewApp v-if="store.pageFlag === 1"/>
-      <ExistingApp v-if="store.pageFlag === 2"/>
+      <Home v-if="store.pageFlag === 0" />
+      <NewApp v-if="store.pageFlag === 1" />
+      <ExistingApp v-if="store.pageFlag === 2" />
     </div>
   </div>
 </template>
 
 <script>
-
 // Component imports
-import Home from './pages/Home.vue'
-import NewApp from './pages/NewApp.vue'
-import ExistingApp from './pages/ExistingApp.vue'
+import Home from "./pages/Home.vue";
+import NewApp from "./pages/NewApp.vue";
+import ExistingApp from "./pages/ExistingApp.vue";
 
 // Define Vue component
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Home,
     NewApp,
-    ExistingApp
+    ExistingApp,
   },
-}
+};
 </script>
 
 <script setup>
-import { store } from './store.js'
+import { store } from "./store.js";
 </script>
 
 <style>
@@ -58,10 +57,10 @@ import { store } from './store.js'
   text-align: center;
   /* position: absolute; */
   /* top: 0%; */
-  height: 100px; 
+  height: 100px;
   width: 100%;
   border: 1px solid black;
 }
 
-@import'~bootstrap/dist/css/bootstrap.css';
+@import "~bootstrap/dist/css/bootstrap.css";
 </style>

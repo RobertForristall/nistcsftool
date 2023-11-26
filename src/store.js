@@ -13,8 +13,8 @@ import { reactive } from "vue";
  * @property userApps: Array<App> => Array of apps associated to the logged in user
  */
 export const store = reactive({
-    pageFlag: 0,
-    currentAppId: -1,
-    userApps: [],
-    phaseFlag: 0
-})
+  pageFlag: 0,
+  currentAppId: -1,
+  userApps: [],
+  phaseFlag: 0,
+});

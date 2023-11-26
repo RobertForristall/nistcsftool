@@ -1,76 +1,67 @@
 <template>
-    <div id="app">
-      <PlanningTools v-if="store.phaseFlag === 1" v-bind:nist-controls ="Object.values(NistControls)" v-bind:nist-requirements="NistRequirements"/>
-      <div class="main-container" v-if="store.phaseFlag === 0">
-        <div class="header-container">
-          <h1>Project - {{ this.currentApp.name }}</h1>
-          <h2>Type - {{ this.currentApp.type }}</h2>
-        </div>
-        <h5>Overall Compliance Progress</h5>
-        <b-progress :value="30" :max="100" show-progress animated></b-progress>
-        <div>
-          <button 
-            type="button" 
-            class="btn btn-primary" 
-            style="margin-top: 100px;"
-            @click="store.phaseFlag = 1">Planning Tools</button>
-        </div>
-        <div>
-          <button 
-            type="button" 
-            class="btn btn-primary" 
-            style="margin-top: 50px;"
-            @click="">Development Tools</button>
-        </div>
-        <div>
-          <button 
-            type="button" 
-            class="btn btn-primary" 
-            style="margin-top: 50px;"
-            @click="">Assessment Tools</button>
-        </div>
-        <div>
-          <button 
-            type="button" 
-            class="btn btn-primary" 
-            style="margin-top: 100px;"
-            @click="store.currentAppId = -1">Back</button>
-        </div>
+  <div>
+    <PlanningTools
+      v-if="store.phaseFlag === 1"
+      v-bind:nist-controls="Object.values(NistControls)"
+      v-bind:nist-requirements="NistRequirements"
+    />
+    <div v-if="store.phaseFlag === 0">
+      <h5>Overall Compliance Progress</h5>
+      <b-progress :value="30" :max="100" show-progress animated></b-progress>
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-top: 100px"
+          @click="store.phaseFlag = 1"
+        >
+          Planning Tools
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-top: 50px"
+          @click=""
+        >
+          Development Tools
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-top: 50px"
+          @click=""
+        >
+          Assessment Tools
+        </button>
       </div>
     </div>
-  </template>
-  
-  <script>
-  
-  import PlanningTools from './PlanningTools.vue';
+  </div>
+</template>
 
-  import NistControls from '../NISTControls.json'
-  import NistRequirements from '../NISTRequirements.json'
+<script>
+import PlanningTools from "./PlanningTools.vue";
 
-  export default {
-    name: 'AppHome',
-    components: {
-      PlanningTools
-    },
-    computed: {
-      currentApp: function () {
-        const isMatch = (element) => element.id === store.currentAppId 
-        const index = store.userApps.findIndex(isMatch)
-        return store.userApps.at(index)
-      }
-    },
-    mounted() {
-      console.log(NistControls)
-      console.log(NistRequirements)
-    }
-  }
-  </script>
+import NistControls from "../NISTControls.json";
+import NistRequirements from "../NISTRequirements.json";
 
-    <script setup>
-    import { store } from '../store.js'
-    </script>
-  
-  <style>
+export default {
+  name: "AppHome",
+  components: {
+    PlanningTools,
+  },
+  mounted() {
+    console.log(NistControls);
+    console.log(NistRequirements);
+  },
+};
+</script>
 
-  </style>
-  
+<script setup>
+import { store } from "../store.js";
+</script>
+
+<style></style>
