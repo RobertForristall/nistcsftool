@@ -2,26 +2,22 @@
   <div>
     <div class="header-container">
       <h1>Secure Software Development Framework App</h1>
+      <h2>Home</h2>
     </div>
     <div>
-      <button
-        type="button"
-        class="btn btn-primary"
-        style="margin-top: 100px"
-        @click="store.pageFlag = 1"
-      >
-        Begin New App Development
-      </button>
-    </div>
-    <div>
-      <button
-        type="button"
-        class="btn btn-primary"
-        style="margin-top: 50px"
-        @click="onClickExistingApps"
-      >
-        Continue With Existing Development
-      </button>
+      <p>Please use the leftside navigation bar to do the following:</p>
+      <ul>
+        <li>
+          Start tracking the development of a new App by clicking "New App"
+        </li>
+        <li>
+          View a detailed list of all tracked Apps by clicking "View Apps"
+        </li>
+        <li>
+          Select and continue tracking on an existing App by clicking "Existing
+          Apps" and selecting the desired app
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -58,4 +54,8 @@ export default {
 import { store } from "../store.js";
 </script>
 
-<style></style>
+<style scoped>
+div {
+  color: white;
+}
+</style>

@@ -5,8 +5,10 @@
       v-bind:control="NistControls[store.selectedControlId]"
     />
     <div v-if="store.selectedControlId === ''">
-      <h5>Planning Phase</h5>
-      <b-progress :value="30" :max="100" show-progress animated></b-progress>
+      <div class="margin-sides">
+        <h5 class="white-text">Planning Phase Compliance Progress</h5>
+        <b-progress :value="30" :max="100" show-progress animated></b-progress>
+      </div>
       <!-- <b-table sticky-header striped hover :items="$props.nistControl"> -->
       <b-table
         sticky-header
@@ -15,6 +17,7 @@
         :items="Object.values(NistControls)"
         :fields="this.fields"
         class="my-table-class"
+        :dark="true"
       >
         <template #cell(Control-ID)="data">
           <b-button
@@ -25,8 +28,8 @@
         </template>
         <template #cell(Description)="data">
           {{
-            data.value.length > 100
-              ? data.value.substring(0, 100) + "..."
+            data.value.length > 120
+              ? data.value.substring(0, 120) + "..."
               : data.value
           }}
         </template>
@@ -64,11 +67,23 @@ export default {
 import { store } from "../store.js";
 </script>
 
-<style>
+<style scoped>
 .row {
   height: 120px;
 }
 .my-table-class {
   max-height: 400px !important;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+}
+.white-text {
+  color: white;
+}
+.margin-sides {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+  text-align: center;
 }
 </style>

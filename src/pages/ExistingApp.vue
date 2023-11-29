@@ -1,15 +1,14 @@
 <template>
   <div>
-    <div class="header-container" v-if="store.currentAppId !== -1">
-      <h1>Project - {{ this.currentApp.name }}</h1>
-      <h2>Type - {{ this.currentApp.type }}</h2>
+    <div class="header-container">
+      <h1>Secure Software Development Framework App</h1>
+      <h2>
+        Project: {{ this.currentApp.name }} | Type: {{ this.currentApp.type }}
+      </h2>
     </div>
-    <div class="header-container" v-if="store.currentAppId === -1">
-      <h1>Existing App</h1>
-    </div>
-    <ListApps v-if="store.currentAppId === -1" />
-    <AppHome v-if="store.currentAppId !== -1" />
-    <div>
+    <!-- <ListApps v-if="store.currentAppId === -1" /> -->
+    <AppHome />
+    <div v-if="store.phaseFlag !== 0" class="center">
       <button
         type="button"
         class="btn btn-primary"
@@ -69,4 +68,8 @@ export default {
 import { store } from "../store.js";
 </script>
 
-<style></style>
+<style scoped>
+.center {
+  align-content: center;
+}
+</style>

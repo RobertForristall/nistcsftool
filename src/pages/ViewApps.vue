@@ -1,22 +1,15 @@
 <template>
   <div>
     <div class="header-container">
-      <h1>View Apps</h1>
+      <h1>Secure Software Development Framework App</h1>
+      <h2>View Apps</h2>
     </div>
-    <div>
-      <button
-        type="button"
-        class="btn btn-primary"
-        style="margin-top: 100px"
-        @click="store.pageFlag = 0"
-      >
-        Back
-      </button>
-    </div>
+    <ListApps />
   </div>
 </template>
 
 <script>
+import ListApps from "../components/ListApps.vue";
 export default {
   name: "ViewApps",
   components: {},

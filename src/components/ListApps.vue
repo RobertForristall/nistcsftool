@@ -1,18 +1,28 @@
 <template>
   <div>
-    <b-table sticky-header striped hover :items="store.userApps">
-      <template #cell(name)="data">
-        <b-button
-          variant="link"
-          @click="store.currentAppId = getIdFromName(data.value)"
-          >{{ data.value }}</b-button
-        >
-      </template>
-    </b-table>
+    <ul>
+      <NcListItem
+        v-for="app in store.userApps"
+        :key="app.id"
+        :title="app.name"
+        :bold="false"
+        :details="'1h'"
+        class="white-text"
+      >
+        <template #icon>
+          <Cog :size="20" />
+        </template>
+        <template #subname class="white-text">
+          {{ app.type }}
+        </template>
+      </NcListItem>
+    </ul>
   </div>
 </template>
 
 <script>
+import NcListItem from "@nextcloud/vue/dist/Components/NcListItem";
+import Cog from "vue-material-design-icons/Cog.vue";
 export default {
   name: "ListApps",
   data: {
@@ -33,4 +43,8 @@ export default {
 import { store } from "../store.js";
 </script>
 
-<style></style>
+<style scoped>
+.white-text {
+  color: white;
+}
+</style>
