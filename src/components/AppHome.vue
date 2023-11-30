@@ -10,7 +10,24 @@
     <div v-if="store.phaseFlag === 0">
       <div class="margin-sides">
         <h5 class="white-text">Overall Compliance Progress</h5>
-        <b-progress :value="30" :max="100" show-progress animated></b-progress>
+        <b-progress class="mt-2" :max="110" show-value>
+          <b-progress-bar
+            :value="110 * (3 / 10)"
+            variant="success"
+          ></b-progress-bar>
+          <b-progress-bar
+            :value="110 * (2.5 / 10)"
+            variant="warning"
+          ></b-progress-bar>
+          <b-progress-bar
+            :value="110 * (1.5 / 10)"
+            variant="danger"
+          ></b-progress-bar>
+          <b-progress-bar
+            :value="110 * (3 / 10)"
+            variant="secondary"
+          ></b-progress-bar>
+        </b-progress>
       </div>
       <div class="flex-container">
         <div
@@ -34,6 +51,7 @@
             :chart-id="index"
             :height="250"
             :width="250"
+            class="white-text"
           />
         </div>
       </div>
@@ -113,7 +131,7 @@ export default {
         labels: ["Satisfied", "In Progress", "Not Satisfied", "Unknown"],
         datasets: [
           {
-            backgroundColor: ["#41B883", "#E46651", "#00D8FF", "#DD1B16"],
+            backgroundColor: ["#198754", "#ffc107", "#dc3545", "#6c757d"],
             data: [40, 20, 80, 10],
           },
         ],

@@ -6,12 +6,11 @@
         Project: {{ this.currentApp.name }} | Type: {{ this.currentApp.type }}
       </h2>
     </div>
-    <!-- <ListApps v-if="store.currentAppId === -1" /> -->
     <AppHome />
     <div v-if="store.phaseFlag !== 0" class="center">
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary bottom-btn"
         style="margin-top: 100px"
         @click="this.onBackClick"
       >
@@ -71,5 +70,15 @@ import { store } from "../store.js";
 <style scoped>
 .center {
   align-content: center;
+  display: flex;
+  bottom: 50px;
+  width: 100%;
+  justify-content: center;
+}
+
+.bottom-btn {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 </style>

@@ -7,7 +7,24 @@
     <div v-if="store.selectedControlId === ''">
       <div class="margin-sides">
         <h5 class="white-text">Planning Phase Compliance Progress</h5>
-        <b-progress :value="30" :max="100" show-progress animated></b-progress>
+        <b-progress class="mt-2" :max="110" show-value>
+          <b-progress-bar
+            :value="110 * (3 / 10)"
+            variant="success"
+          ></b-progress-bar>
+          <b-progress-bar
+            :value="110 * (2.5 / 10)"
+            variant="warning"
+          ></b-progress-bar>
+          <b-progress-bar
+            :value="110 * (1.5 / 10)"
+            variant="danger"
+          ></b-progress-bar>
+          <b-progress-bar
+            :value="110 * (3 / 10)"
+            variant="secondary"
+          ></b-progress-bar>
+        </b-progress>
       </div>
       <!-- <b-table sticky-header striped hover :items="$props.nistControl"> -->
       <b-table
