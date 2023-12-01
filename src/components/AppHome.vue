@@ -12,19 +12,19 @@
         <h5 class="white-text">Overall Compliance Progress</h5>
         <b-progress class="mt-2" :max="110" show-value>
           <b-progress-bar
-            :value="110 * (3 / 10)"
+            :value="progressValues[0]"
             variant="success"
           ></b-progress-bar>
           <b-progress-bar
-            :value="110 * (2.5 / 10)"
+            :value="progressValues[1]"
             variant="warning"
           ></b-progress-bar>
           <b-progress-bar
-            :value="110 * (1.5 / 10)"
+            :value="progressValues[2]"
             variant="danger"
           ></b-progress-bar>
           <b-progress-bar
-            :value="110 * (3 / 10)"
+            :value="progressValues[3]"
             variant="secondary"
           ></b-progress-bar>
         </b-progress>
@@ -55,36 +55,6 @@
           />
         </div>
       </div>
-      <!-- <div>
-        <button
-          type="button"
-          class="btn btn-primary"
-          style="margin-top: 100px"
-          @click="store.phaseFlag = 1"
-        >
-          Planning Tools
-        </button>
-      </div>
-      <div>
-        <button
-          type="button"
-          class="btn btn-primary"
-          style="margin-top: 50px"
-          @click="store.phaseFlag = 2"
-        >
-          Development Tools
-        </button>
-      </div>
-      <div>
-        <button
-          type="button"
-          class="btn btn-primary"
-          style="margin-top: 50px"
-          @click="store.phaseFlag = 3"
-        >
-          Assessment Tools
-        </button>
-      </div> -->
     </div>
   </div>
 </template>
@@ -118,10 +88,29 @@ export default {
     AssessmentTools,
   },
   mounted() {
-    console.log(NistControls);
+    console.log(Object.keys(NistControls).length);
     // console.log(NistRequirements);
   },
   data() {
+    let progressValues = [0, 0, 0, 0];
+    Object.keys(NistControls).forEach((key) => {
+      switch (NistControls[key].Response) {
+        case "Satisfied":
+          progressValues[0]++;
+          break;
+        case "In Progress":
+          progressValues[1]++;
+          break;
+        case "Not Satisfied":
+          progressValues[2]++;
+          break;
+        case "Unknown":
+          progressValues[3]++;
+          break;
+        default:
+          break;
+      }
+    });
     return {
       chartOptions: {
         responsive: false,
@@ -136,7 +125,32 @@ export default {
           },
         ],
       },
+      progressValues: progressValues,
     };
+  },
+  computed: {
+    overallProgress() {
+      let progressValues = [0, 0, 0, 0];
+      Object.keys(NistControls).forEach((key) => {
+        switch (NistControls[key].Response) {
+          case 1:
+            progressValues[0]++;
+            break;
+          case 2:
+            progressValues[1]++;
+            break;
+          case 3:
+            progressValues[2]++;
+            break;
+          case 4:
+            progressValues[3]++;
+            break;
+          default:
+            break;
+        }
+      });
+      return progressValues;
+    },
   },
   methods: {
     getStages() {

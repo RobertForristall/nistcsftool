@@ -53,6 +53,34 @@ class Version000000Date20181013124731 extends SimpleMigrationStep {
 			$table->addIndex(['user_id'], 'apps_uid');
 		}
 
+		// if ($schema->hasTable('ControlCompliance')){
+		// 	$schema->dropTable('ControlCompliance')
+		// }
+
+		if (!$schema->hasTable('ControlCompliance')) {
+			$table = $schema->createTable('ControlCompliance');
+			$table->addColumn('id', Types::BIGINT, [
+				'autoincrement' => true,
+				'notnull' => true,
+				'length' => 4
+			]);
+			$table->addColumn('control_id', Types::STRING, [
+				'notnull' => true,
+				'length' => 64,
+			]);
+			$table->addColumn('app_id', Types::BIGINT, [
+				'notnull' => true,
+				'length' => 4
+			]);
+			$table->addColumn('compliance_value', Types::INTEGER, [
+				'notnull' => true,
+				'length' => 4
+			]);
+			$table->setPrimaryKey(['id']);
+			$table->addUniqueIndex(['control_id', 'app_id'], 'control_app_index');
+			$table->addForeignKeyConstraint($schema->getTable('Apps'), ['app_id'], ['id'], [], 'fk_control_app');
+		}
+
 		return $schema;
 	}
 

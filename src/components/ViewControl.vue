@@ -10,7 +10,11 @@
             label="Current compliance of control:"
             v-slot="{ ariaDescribedby }"
           >
-            <b-form-radio-group v-model="selected" buttons>
+            <b-form-radio-group
+              v-model="selected"
+              buttons
+              @change="onComplianceSelection"
+            >
               <b-form-radio
                 v-for="option in options"
                 :key="option.text"
@@ -133,6 +137,8 @@
 </template>
 
 <script>
+import axios from "@nextcloud/axios";
+import { generateUrl } from "@nextcloud/router";
 import NistRequirements from "../NISTRequirements.json";
 export default {
   name: "ViewApps",
@@ -174,6 +180,22 @@ export default {
   methods: {
     getCollapseTag: function (index) {
       return `collapse-${index}`;
+    },
+    onComplianceSelection: async function () {
+      console.log("saving compliance level: " + this.selected);
+      try {
+        const postControlResponse = await axios.post(
+          generateUrl("/apps/nistcsftool/controls"),
+          {
+            control_id: store.selectedControlId,
+            app_id: store.currentAppId,
+            compliance_value: this.selected,
+          }
+        );
+        console.log(postControlResponse.data);
+      } catch (e) {
+        console.error(e);
+      }
     },
   },
 };

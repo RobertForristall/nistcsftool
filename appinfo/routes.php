@@ -14,11 +14,15 @@ declare(strict_types=1);
 return [
 	'resources' => [
 		'app' => ['url' => '/apps'],
-		'app_api' => ['url' => '/api/0.1/apps']
+		'app_api' => ['url' => '/api/0.1/apps'],
+		'control' => ['url' => '/controls'],
+		'control_api' => ['url' => '/api/0.1/controls']
 	],
 	'routes' => [
 		['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
 		['name' => 'app_api#preflighted_cors', 'url' => '/api/0.1/{path}',
+			'verb' => 'OPTIONS', 'requirements' => ['path' => '.+']],
+		['name' => 'control_api#preflighted_cors', 'url' => '/api/0.1/{path}',
 			'verb' => 'OPTIONS', 'requirements' => ['path' => '.+']]
 	]
 ];

@@ -11,12 +11,16 @@ use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 
 use OCA\NistCsfTool\Service\AppNotFound;
+use OCA\NistCsfTool\Service\ControlNotFound;
 
 trait Errors {
 	protected function handleNotFound(Closure $callback): DataResponse {
 		try {
 			return new DataResponse($callback());
 		} catch (AppNotFound $e) {
+			$message = ['message' => $e->getMessage()];
+			return new DataResponse($message, Http::STATUS_NOT_FOUND);
+		} catch (ControlNotFound $e) {
 			$message = ['message' => $e->getMessage()];
 			return new DataResponse($message, Http::STATUS_NOT_FOUND);
 		}

@@ -109,9 +109,20 @@ export default {
     }
   },
   methods: {
-    clickExistingApp(id) {
-      store.currentAppId = id;
-      store.pageFlag = 2;
+    async clickExistingApp(id) {
+      try {
+        const response = await axios.get(
+          generateUrl("/apps/nistcsftool/controls?app_id=" + id)
+        );
+        console.log(response.data);
+        store.controlComplianceValues = response.data;
+        store.selectedControlId = "";
+        store.phaseFlag = 0;
+        store.currentAppId = id;
+        store.pageFlag = 2;
+      } catch (e) {
+        console.error(e);
+      }
     },
   },
 };
