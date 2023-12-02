@@ -23,10 +23,10 @@
     </div>
     <div class="white-text margin-sides" v-if="store.selectedRequirementId !== ''">
         <h3>{{ nistRequirements[store.selectedRequirementId].Requirement }}</h3>
-        <h4>{{ nistRequirements[store.selectedRequirementId].Description }}</h4>
+        <h4 class="manage-header">{{ nistRequirements[store.selectedRequirementId].Description }}</h4>
         <ul>
             <li v-for="item in nistRequirements[store.selectedRequirementId]['Related Controls'].split('\n')">
-                {{ item }}{{ item !== "" ? ": " + nistControls[item].Response : "" }}
+                {{ item }} {{ item !== "" ? `(${phaseMap[nistControls[item].Phase]})` : "" }}{{ item !== "" ? ": " + nistControls[item].Response : "" }}
             </li>
         </ul>
     </div>
@@ -96,7 +96,12 @@ export default {
         Phase: 2
       },
       nistRequirements: NistRequirements,
-      nistControls: this.$props.nistControls
+      nistControls: this.$props.nistControls,
+      phaseMap: {
+        1: "Planning Control",
+        2: "Development Control",
+        3: "Deployment Control"
+      }
     };
   },
   methods: {
@@ -164,5 +169,11 @@ canvas {
   margin-right: 25px;
   margin-top: 30px;
   text-align: center;
+}
+
+.manage-header {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>

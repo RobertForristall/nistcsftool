@@ -48,6 +48,7 @@ export default {
         if (store.phaseFlag === 0) {
           store.currentAppId = -1;
         } else {
+          store.selectedRequirementId = ""
           if (store.selectedControlId === "") {
             store.phaseFlag = 0;
           } else {

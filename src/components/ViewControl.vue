@@ -67,7 +67,12 @@
               role="tabpanel"
             >
               <b-card-body>
-                <p>Files content</p>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label"
+                    >Default file input example</label
+                  >
+                  <input class="form-control" type="file" id="formFile" />
+                </div>
               </b-card-body>
             </b-collapse>
           </b-card>
@@ -148,11 +153,11 @@ export default {
   components: {},
   data() {
     const responseMap = {
-      "Satisfied": 1,
+      Satisfied: 1,
       "In Progress": 2,
       "Not Satisfied": 3,
-      "Unknown": 4
-    }
+      Unknown: 4,
+    };
     return {
       selected: responseMap[this.$props.control.Response],
       options: [
@@ -199,7 +204,10 @@ export default {
           }
         );
         console.log(postControlResponse.data);
-        this.$emit('change', {control_id: store.selectedControlId, compliance_value: this.selected});
+        this.$emit("change", {
+          control_id: store.selectedControlId,
+          compliance_value: this.selected,
+        });
       } catch (e) {
         console.error(e);
       }

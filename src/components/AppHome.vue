@@ -72,7 +72,7 @@
         >
           <button
             type="button"
-            style="margin-top: 100px; margin-bottom: 50px"
+            style="margin-top: 50px; margin-bottom: 50px"
             @click="store.phaseFlag = index + 1"
           >
             {{ stage }}
