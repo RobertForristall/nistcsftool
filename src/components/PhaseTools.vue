@@ -3,6 +3,7 @@
     <ViewControl
       v-if="store.selectedControlId !== ''"
       v-bind:control="NistControls[store.selectedControlId]"
+      @change="handleComplianceChange"
     />
     <div v-if="store.selectedControlId === ''">
       <div class="margin-sides">
@@ -94,7 +95,8 @@ export default {
       nistControls: this.$props.nistControls,
       progressValues: progressValues,
       phaseTitle: phaseTitle,
-      progressMax: this.$props.nistControls.length
+      progressMax: this.$props.nistControls.length,
+      phase: this.$props.phase
     }
   },
   computed: {
@@ -107,6 +109,39 @@ export default {
       return ["Control-ID", "Description", "Response"];
     },
   },
+  methods: {
+    handleComplianceChange: function (event) {
+      console.log("In Event Handler for emitted event")
+      let index = this.nistControls.findIndex(x => x["Control ID"] === event.control_id);
+      const responseMap = {
+      "Satisfied": 0,
+      "In Progress": 1,
+      "Not Satisfied": 2,
+      "Unknown": 3
+      }
+      let oldValue = responseMap[this.nistControls[index].Response];
+      switch(event.compliance_value) {
+        case 1:
+          this.progressValues[0]++
+          this.progressValues[responseMap[this.nistControls[index].Response]]--
+          this.nistControls[index].Response = "Satisfied"
+          break;
+        case 2:
+          this.progressValues[1]++
+          this.progressValues[responseMap[this.nistControls[index].Response]]--
+          this.nistControls[index].Response = "In Progress"
+          break;
+        case 3:
+          this.progressValues[2]++
+          this.progressValues[responseMap[this.nistControls[index].Response]]--
+          this.nistControls[index].Response = "Not Satisfied"
+          break;
+        default:
+          break;
+      }
+      this.$emit('change', {...event, phase: this.phase, controls: this.nistControls, old_value: oldValue+1})
+    }
+  }
 };
 </script>
 

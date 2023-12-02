@@ -147,8 +147,14 @@ export default {
   },
   components: {},
   data() {
+    const responseMap = {
+      "Satisfied": 1,
+      "In Progress": 2,
+      "Not Satisfied": 3,
+      "Unknown": 4
+    }
     return {
-      selected: 4,
+      selected: responseMap[this.$props.control.Response],
       options: [
         {
           text: "Satisfied",
@@ -193,6 +199,7 @@ export default {
           }
         );
         console.log(postControlResponse.data);
+        this.$emit('change', {control_id: store.selectedControlId, compliance_value: this.selected});
       } catch (e) {
         console.error(e);
       }
