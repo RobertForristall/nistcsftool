@@ -19,4 +19,5 @@ export const store = reactive({
   phaseFlag: 0,
   selectedControlId: "",
   controlComplianceValues: [],
+  selectedRequirementId: ""
 });

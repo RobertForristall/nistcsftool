@@ -21,9 +21,11 @@
       v-bind:phase="3"
       @change="handleComplianceChange"
     />
+    <Requirements v-if="store.phaseFlag === 4"
+      v-bind:nist-controls="fullControls"/>
     <div v-if="store.phaseFlag === 0">
       <div class="margin-sides">
-        <h5 class="white-text">Overall Compliance Progress</h5>
+        <h5 class="white-text">Overall Control Compliance Progress</h5>
         <b-progress class="mt-2" :max="110" show-value>
           <b-progress-bar
             :value="progressValues[0]"
@@ -42,6 +44,22 @@
             variant="secondary"
           ></b-progress-bar>
         </b-progress>
+      </div>
+      <div class="margin-sides">
+        <button
+            type="button"
+            style="margin-top: 50px;"
+            @click="store.phaseFlag = 4"
+          >
+          Requirements Compliance
+        </button>
+        <button
+            type="button"
+            style="margin-top: 50px;"
+            @click="store.phaseFlag = 5"
+          >
+          Assessment Tools
+        </button>
       </div>
       <div class="flex-container">
         <div
@@ -81,9 +99,10 @@
 
 <script>
 import PhaseTools from "../components/PhaseTools.vue";
+import Requirements from "./Requirements.vue";
 
 import NistControls from "../NISTControls.json";
-// import NistRequirements from "../NISTRequirements.json";
+import NistRequirements from "../NISTRequirements.json";
 
 import { Doughnut } from "vue-chartjs";
 
@@ -102,10 +121,11 @@ export default {
   name: "AppHome",
   components: {
     PhaseTools,
+    Requirements
   },
   mounted() {
     console.log(Object.keys(NistControls).length);
-    // console.log(NistRequirements);
+    console.log(Object.keys(NistRequirements).toString());
   },
   data() {
     let progressValues = [0, 0, 0, 110];
@@ -202,6 +222,7 @@ export default {
       planningControls: planningControls,
       developmentControls: developmentControls,
       deploymentControls: deploymentControls,
+      fullControls: NistControls
     };
   },
   computed: {},
@@ -214,6 +235,10 @@ export default {
       ];
     },
     handleComplianceChange(event) {
+      const newResposne = event.compliance_value === 1  ? "Satisfied"
+        : (event.compliance_value === 2 ? "In Progress" 
+        : (event.compliance_value === 3 ? "Not Satisfied" : "Unknown"))
+      this.fullControls[event.control_id].Response = newResposne
       switch (event.phase) {
         case 1:
           this.planningControls = event.controls;
@@ -255,7 +280,7 @@ import { store } from "../store.js";
 .margin-sides {
   margin-left: 25px;
   margin-right: 25px;
-  margin-top: 50px;
+  margin-top: 30px;
   text-align: center;
 }
 .flex-container {
