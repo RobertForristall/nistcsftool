@@ -1,12 +1,23 @@
 <template>
   <div>
-    <PlanningTools
+    <PhaseTools
       v-if="store.phaseFlag === 1"
-      v-bind:nist-controls="Object.values(NistControls)"
+      v-bind:nist-controls="planningControls"
       v-bind:nist-requirements="NistRequirements"
+      v-bind:phase="1"
     />
-    <DevelopmentTools v-if="store.phaseFlag === 2" />
-    <AssessmentTools v-if="store.phaseFlag === 3" />
+    <PhaseTools
+      v-if="store.phaseFlag === 2"
+      v-bind:nist-controls="developmentControls"
+      v-bind:nist-requirements="NistRequirements"
+      v-bind:phase="2"
+    />
+    <PhaseTools
+      v-if="store.phaseFlag === 3"
+      v-bind:nist-controls="deploymentControls"
+      v-bind:nist-requirements="NistRequirements"
+      v-bind:phase="3"
+    />
     <div v-if="store.phaseFlag === 0">
       <div class="margin-sides">
         <h5 class="white-text">Overall Compliance Progress</h5>
@@ -47,7 +58,8 @@
           </button>
           <Doughnut
             :options="chartOptions"
-            :data="chartData"
+            :data="index === 0 ? planningChartData 
+              : ((index === 1) ? developmentChartData : deploymentChartData)"
             :chart-id="index"
             :height="250"
             :width="250"
@@ -60,9 +72,7 @@
 </template>
 
 <script>
-import PlanningTools from "./PlanningTools.vue";
-import DevelopmentTools from "./DevelopmentTools.vue";
-import AssessmentTools from "./AssessmentTools.vue";
+import PhaseTools from "../components/PhaseTools.vue"
 
 import NistControls from "../NISTControls.json";
 // import NistRequirements from "../NISTRequirements.json";
@@ -83,75 +93,110 @@ ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale);
 export default {
   name: "AppHome",
   components: {
-    PlanningTools,
-    DevelopmentTools,
-    AssessmentTools,
+    PhaseTools
   },
   mounted() {
     console.log(Object.keys(NistControls).length);
     // console.log(NistRequirements);
   },
   data() {
-    let progressValues = [0, 0, 0, 0];
-    Object.keys(NistControls).forEach((key) => {
-      switch (NistControls[key].Response) {
-        case "Satisfied":
+    let progressValues = [0, 0, 0, 110];
+    store.controlComplianceValues.forEach((item) => {
+      switch (item.compliance_value) {
+        case 1:
           progressValues[0]++;
+          progressValues[3]--;
+          NistControls[item.control_id].Response = "Satisfied";
           break;
-        case "In Progress":
+        case 2:
           progressValues[1]++;
+          progressValues[3]--;
+          NistControls[item.control_id].Response = "In Progress";
           break;
-        case "Not Satisfied":
+        case 3:
           progressValues[2]++;
-          break;
-        case "Unknown":
-          progressValues[3]++;
+          progressValues[3]--;
+          NistControls[item.control_id].Response = "Not Satisfied";
           break;
         default:
           break;
       }
     });
+    let planningControls = [];
+    let planningDougnutData = [0, 0, 0, 28]
+    let developmentControls = [];
+    let developmentDougnutData = [0, 0, 0, 46]
+    let deploymentControls = [];
+    let deploymentDougnutData = [0, 0, 0, 36]
+    const responseMap = {
+      "Satisfied": 0,
+      "In Progress": 1,
+      "Not Satisfied": 2,
+      "Unknown": 3
+    }
+    Object.values(NistControls).forEach((item) => {
+      switch (item.Phase) {
+        case 1:
+          planningControls.push(item);
+          planningDougnutData[responseMap[item.Response]]++;
+          planningDougnutData[3]--;
+          break;
+        case 2:
+          developmentControls.push(item);
+          developmentDougnutData[responseMap[item.Response]]++;
+          developmentDougnutData[3]--;
+          break;
+        case 3:
+          deploymentControls.push(item);
+          deploymentDougnutData[responseMap[item.Response]]++;
+          deploymentDougnutData[3]--;
+          break;
+        default:
+          break;
+      }
+    });
+    console.log(planningControls);
+    console.log(developmentControls);
+    console.log(deploymentControls);
     return {
       chartOptions: {
         responsive: false,
         maintainAspectRatio: false,
       },
-      chartData: {
+      planningChartData: {
         labels: ["Satisfied", "In Progress", "Not Satisfied", "Unknown"],
         datasets: [
           {
             backgroundColor: ["#198754", "#ffc107", "#dc3545", "#6c757d"],
-            data: [40, 20, 80, 10],
+            data: planningDougnutData,
+          },
+        ],
+      },
+      developmentChartData: {
+        labels: ["Satisfied", "In Progress", "Not Satisfied", "Unknown"],
+        datasets: [
+          {
+            backgroundColor: ["#198754", "#ffc107", "#dc3545", "#6c757d"],
+            data: developmentDougnutData,
+          },
+        ],
+      },
+      deploymentChartData: {
+        labels: ["Satisfied", "In Progress", "Not Satisfied", "Unknown"],
+        datasets: [
+          {
+            backgroundColor: ["#198754", "#ffc107", "#dc3545", "#6c757d"],
+            data: deploymentDougnutData,
           },
         ],
       },
       progressValues: progressValues,
+      planningControls: planningControls,
+      developmentControls: developmentControls,
+      deploymentControls: deploymentControls,
     };
   },
-  computed: {
-    overallProgress() {
-      let progressValues = [0, 0, 0, 0];
-      Object.keys(NistControls).forEach((key) => {
-        switch (NistControls[key].Response) {
-          case 1:
-            progressValues[0]++;
-            break;
-          case 2:
-            progressValues[1]++;
-            break;
-          case 3:
-            progressValues[2]++;
-            break;
-          case 4:
-            progressValues[3]++;
-            break;
-          default:
-            break;
-        }
-      });
-      return progressValues;
-    },
-  },
+  computed: {},
   methods: {
     getStages() {
       return [
