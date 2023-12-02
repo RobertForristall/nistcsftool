@@ -117,6 +117,7 @@ export default {
         console.log(response.data);
         store.controlComplianceValues = response.data;
         store.selectedControlId = "";
+        store.selectedRequirementId = ""
         store.phaseFlag = 0;
         store.currentAppId = id;
         store.pageFlag = 2;

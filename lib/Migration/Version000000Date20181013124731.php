@@ -76,6 +76,10 @@ class Version000000Date20181013124731 extends SimpleMigrationStep {
 				'notnull' => true,
 				'length' => 4
 			]);
+			$table->addColumn('comment', Types::TEXT, [
+				'notnull' => false,
+				'default' => ' '
+			]);
 			$table->setPrimaryKey(['id']);
 			$table->addUniqueIndex(['control_id', 'app_id'], 'control_app_index');
 			$table->addForeignKeyConstraint($schema->getTable('Apps'), ['app_id'], ['id'], [], 'fk_control_app');

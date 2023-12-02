@@ -46,7 +46,7 @@
               role="tabpanel"
             >
               <b-card-body class="h-50">
-                <textarea class="w-100"> </textarea>
+                <textarea class="w-100" v-model="comment" placeholder="Add a comment"></textarea>
               </b-card-body>
             </b-collapse>
           </b-card>
@@ -186,6 +186,7 @@ export default {
           buttonVariant: "outline-secondary",
         },
       ],
+      comment: this.$props.control.Comment
     };
   },
   methods: {
@@ -201,12 +202,14 @@ export default {
             control_id: store.selectedControlId,
             app_id: store.currentAppId,
             compliance_value: this.selected,
+            comment: this.comment
           }
         );
         console.log(postControlResponse.data);
         this.$emit("change", {
           control_id: store.selectedControlId,
           compliance_value: this.selected,
+          comment: this.comment
         });
       } catch (e) {
         console.error(e);

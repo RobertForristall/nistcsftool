@@ -130,6 +130,7 @@ export default {
   data() {
     let progressValues = [0, 0, 0, 110];
     store.controlComplianceValues.forEach((item) => {
+      NistControls[item.control_id].Comment = item.comment;
       switch (item.compliance_value) {
         case 1:
           progressValues[0]++;
@@ -239,6 +240,7 @@ export default {
         : (event.compliance_value === 2 ? "In Progress" 
         : (event.compliance_value === 3 ? "Not Satisfied" : "Unknown"))
       this.fullControls[event.control_id].Response = newResposne
+      this.fullControls[event.control_id].Comment = event.comment
       switch (event.phase) {
         case 1:
           this.planningControls = event.controls;

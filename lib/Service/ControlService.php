@@ -52,18 +52,20 @@ class ControlService {
 		}
 	}
 
-	public function create(string $control_id, int $app_id, int $compliance_value): Control {
+	public function create(string $control_id, int $app_id, int $compliance_value, string $comment): Control {
         try {
             $Control = $this->mapper->find($control_id, $app_id);
             $Control->setControlId($control_id);
             $Control->setAppId($app_id);
             $Control->setComplianceValue($compliance_value);
+			$Control->setComment($comment);
             return $this->mapper->update($Control);
         } catch (DoesNotExistException $e) {
             $Control = new Control();
             $Control->setControlId($control_id);
             $Control->setAppId($app_id);
             $Control->setComplianceValue($compliance_value);
+			$Control->setComment($comment);
             return $this->mapper->insert($Control);
         }
 	}

@@ -17,18 +17,22 @@ use OCP\AppFramework\Db\Entity;
  * @method setAppId(int $appId): void
  * @method getComplianceValue(): int
  * @method setComplianceValue(int $complianceValue): void
+ * @method getComment(): string
+ * @method setComment(string $comment): void
  */
 class Control extends Entity implements JsonSerializable {
 	protected string $controlId = '';
 	protected int $appId = -1;
 	protected int $complianceValue = 4;
+	protected ?string $comment = '';
 
 	public function jsonSerialize(): array {
 		return [
 			'id' => $this->id,
 			'control_id' => $this->controlId,
 			'app_id' => $this->appId,
-            'compliance_value' => $this->complianceValue
+            'compliance_value' => $this->complianceValue,
+			'comment' => $this->comment
 		];
 	}
 }

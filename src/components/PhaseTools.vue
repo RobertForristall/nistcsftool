@@ -139,6 +139,7 @@ export default {
         default:
           break;
       }
+      this.nistControls[index].Comment = event.comment
       this.$emit('change', {...event, phase: this.phase, controls: this.nistControls, old_value: oldValue+1})
     }
   }

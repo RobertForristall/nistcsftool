@@ -50,7 +50,7 @@ class ControlApiController extends ApiController {
 	 * @NoCSRFRequired
 	 * @NoAdminRequired
 	 */
-	public function create(string $control_id, int $app_id, int $compliance_value): DataResponse {
-		return new DataResponse($this->service->create($control_id, $app_id, $compliance_value));
+	public function create(string $control_id, int $app_id, int $compliance_value, string $comment): DataResponse {
+		return new DataResponse($this->service->create($control_id, $app_id, $compliance_value, string $comment));
 	}
 }
